@@ -1,0 +1,37 @@
+{
+    "loading": {
+        "loading": "loading"
+    },
+    "error": {
+        "content": "Sorry! This page doesn't exist.",
+        "return": "home page"
+    },
+    "topbar": {
+        "light": "Light mode",
+        "dark": "Dark mode",
+        "lang": "Language",
+        "menu": "Menu"
+    },
+    "nav": {
+        "home": "home",
+        "explore": "explore",
+        "future": "future",
+        "about":"about the project"
+    },
+    "home": {
+        "title": "Explore new technologies",
+        "subtitle": "Learn about the direction of Industry 4.0",
+        "button": "Enter"
+    },
+    "explore": {
+        "title": "explore",
+        "ai": "AI & Big Data",
+        "metaverse": "Metaverse",
+        "dt": "Digital Twin"
+    },
+    "about": {
+        "title": "about the project",
+        "content": "lorem ipsum",
+        "contact": "contact"
+    }
+}

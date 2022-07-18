@@ -1,0 +1,37 @@
+{
+    "loading": {
+        "loading": "로딩중"
+    },
+    "error": {
+        "content": "죄송합니다! 이 페이지가 없습니다.",
+        "return": "홈"
+    },
+    "topbar": {
+        "light": "밝은 모드",
+        "dark": "어두운 모드",
+        "lang": "언어",
+        "menu": "메뉴"
+    },
+    "nav": {
+        "home": "홈",
+        "explore": "탐구",
+        "future": "미래",
+        "about":"프로젝트에 대해"
+    },
+    "home": {
+        "title": "새로운 기술을 탐구합시다",
+        "subtitle": "인더스트리 4.0 방향에 대해 배웁니다",
+        "button": "들어가기"
+    },
+    "explore": {
+        "title": "탐구",
+        "ai": "AI 및 빅 데이터",
+        "metaverse": "메타버스",
+        "dt": "디지털 트윈"
+    },
+    "about": {
+        "title": "프로젝트에 대해",
+        "content": "lorem ipsum",
+        "contact": "연락처"
+    }
+}
