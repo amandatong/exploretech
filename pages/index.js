@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import Script from 'next/script';
 import Image from 'next/image'
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
@@ -8,14 +6,15 @@ export default function Home() {
   const { t, i18n } = useTranslation('common', { keyPrefix: 'home' });
 
   return (
-    <>
-      <main>
-      <div className="hero korean">
-      <Link href="" locale="en">English</Link> <Link href="" locale="ko">Korean</Link>
-      {t('title')}
+    <main id="home" >
+      <div className="container">
+        <div className="hero">
+          <div className="title">{t('title')}</div>
+          <div className="subtitle">{t('subtitle')}</div>
+          <Link href="/second"><div className="button">{t('button')}</div></Link>
+        </div>
       </div>
-      </main>
-    </>
+    </main>
   )
 }
 

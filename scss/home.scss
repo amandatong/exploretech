@@ -1,0 +1,45 @@
+#home {
+    .container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .hero {
+        width:70vw;
+        height:80vh;
+        font-weight:300;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+        .title {
+            font-size:$title;
+            line-height:1.1;
+            font-weight:700;
+            text-transform:uppercase;
+        }
+
+        .subtitle {
+            font-size:$subtitle;
+            margin:1rem;
+            margin-bottom:2rem;
+            font-style:italic;
+        }
+
+        .button {
+            line-height:1;
+            font-weight:700;
+            font-size:$button;
+            background-color: $cyan;
+            text-transform:uppercase;
+            padding:0.5em 0.5em;
+            min-width:300px;
+            width:25vw;
+            border-radius:100px;
+        }
+    }
+}

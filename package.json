@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "antd": "^4.21.7",
+    "cookie-cutter": "^0.2.0",
+    "cookies": "^0.8.0",
     "i18next": "^21.8.14",
     "next": "12.2.2",
+    "next-dark-mode": "^3.0.0",
     "next-i18next": "^11.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^11.18.1",
+    "react-media-hook": "^0.4.9",
     "sass": "^1.53.0"
   },
   "devDependencies": {

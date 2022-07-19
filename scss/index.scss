@@ -1,22 +1,38 @@
+$dark-text: white;
+$dark-bg: black;
+
+$light-text: black;
+$light-bg: white;
+
 body {
     font-style:normal;
+    font-size:$body;
 }
 
-.english {
+.en {
     font-family:"poppins", sans-serif;
 }
 
-.korean {
+.ko {
     font-family:"SourceHanSansK", sans-serif;
 }
 
-.hero {
-    width:90vw;
-    height:90vh;
+#dark {
+    background-color:$dark-bg;
+    color:$dark-text;
+}
+
+#light {
+    background-color:$light-bg;
+    color:$light-text;
+}
+
+#topbar {
+    padding:1rem;
+    // font-size:1.2em;
+    svg {
+        width: $body;
+    }
     display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size:96px;
-    font-weight:300;
+    justify-content: space-between;
 }
