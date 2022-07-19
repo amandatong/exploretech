@@ -1,12 +1,8 @@
 import { useTranslation } from 'next-i18next';
 import { MoonIcon, SunIcon, GlobeAltIcon, MenuIcon } from '@heroicons/react/outline';
-import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space } from 'antd';
 import Link from 'next/link';
-import { useThemeContext } from './ThemeContext';
 import React, { useEffect } from 'react';
-import cookieCutter from 'cookie-cutter';
-import CookiesUtils from '../utils/cookies'
 import { useDarkMode } from 'next-dark-mode'
 
 const langs = (
@@ -63,7 +59,7 @@ export default function Topbar() {
 
     return(
         <div id="topbar">
-            <div class="settings">
+            <div className="settings">
                 <div className="mode-switch" onClick={() => toggleMode()}>
                     {darkModeActive ? <><MoonIcon/> {t('dark')}</> : <><SunIcon/> {t('light')}</>}
                 </div>
@@ -72,7 +68,7 @@ export default function Topbar() {
             </div>
             {/* {t('lang')} */}
             
-            <div class="menu">
+            <div className="menu">
                 {t('menu')}
                 <MenuIcon/>
             </div>
