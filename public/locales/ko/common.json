@@ -13,9 +13,9 @@
         "menu": "메뉴"
     },
     "nav": {
-        "home": "홈",
-        "explore": "탐구",
-        "future": "미래",
+        "home": "1. 홈",
+        "explore": "2. 탐구",
+        "future": "3. 미래",
         "about":"프로젝트에 대해"
     },
     "home": {

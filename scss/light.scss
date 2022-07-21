@@ -1,0 +1,12 @@
+$light-text: black;
+$light-bg: white;
+
+#light {
+    background-color:$light-bg;
+    color:$light-text;
+
+    .links a {
+        color:$light-bg;
+    }
+    // @import './antd.scss';
+}

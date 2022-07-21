@@ -13,9 +13,9 @@
         "menu": "Menu"
     },
     "nav": {
-        "home": "home",
-        "explore": "explore",
-        "future": "future",
+        "home": "1. home",
+        "explore": "2. explore",
+        "future": "3. future",
         "about":"about the project"
     },
     "home": {

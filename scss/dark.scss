@@ -1,0 +1,10 @@
+$dark-text: white;
+$dark-bg: black;
+#dark {
+    background-color:$dark-bg;
+    color:$dark-text;
+    .links a {
+        color:$dark-bg;
+    }
+    // @import './antd_dark.scss';
+}

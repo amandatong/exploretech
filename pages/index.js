@@ -11,7 +11,7 @@ export default function Home() {
         <div className="hero">
           <div className="title">{t('title')}</div>
           <div className="subtitle">{t('subtitle')}</div>
-          <Link href="/second"><div className="button">{t('button')}</div></Link>
+          <Link href="/explore"><div className="button">{t('button')}</div></Link>
         </div>
       </div>
     </main>

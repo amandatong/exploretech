@@ -1,9 +1,10 @@
-import { useTranslation } from 'next-i18next';
-import { MoonIcon, SunIcon, GlobeAltIcon, MenuIcon } from '@heroicons/react/outline';
-import { Dropdown, Menu, Space } from 'antd';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
-import { useDarkMode } from 'next-dark-mode'
+import { useTranslation } from 'next-i18next';
+import { useDarkMode } from 'next-dark-mode';
+import { MoonIcon, SunIcon, GlobeAltIcon, MenuIcon } from '@heroicons/react/outline';
+import { Dropdown, Menu, Tooltip, Drawer } from 'antd';
+import NavMenu from './nav-menu';
 
 const langs = (
     <Menu
@@ -21,57 +22,56 @@ const langs = (
   );
 
 export default function Topbar() {
-    // const { darkMode, setDarkMode } = useThemeContext();
-    const { t, i18n } = useTranslation('common', { keyPrefix: 'topbar' });
-    const {
-        autoModeActive,    // boolean - whether the auto mode is active or not
-        autoModeSupported, // boolean - whether the auto mode is supported on this browser
-        darkModeActive,    // boolean - whether the dark mode is active or not
-        switchToAutoMode,  // function - toggles the auto mode on
-        switchToDarkMode,  // function - toggles the dark mode on
-        switchToLightMode, // function - toggles the light mode on
-      } = useDarkMode()
+  const { t, i18n } = useTranslation('common', { keyPrefix: 'topbar' });
+  const { darkModeActive, switchToDarkMode, switchToLightMode } = useDarkMode();
+  const [visible, setVisible] = useState(false);
 
-      const toggleMode = () => {
-        if (darkModeActive){
-          switchToLightMode();
-        } else {
-          switchToDarkMode();
-        }
-        let theme = darkModeActive ? 'dark' : 'light';
-        document.body.id = theme;
-      }
-      
-      useEffect(() => {
-            let theme = darkModeActive ? 'light' : 'dark';
-            document.body.id = theme;
-        }, []);
-      
-    // useEffect(() => {
-    //   // if(darkMode){
-    //   //   switchToLightMode();
-    //   // } else {
-    //   //   switchToDarkMode();
-    //   // }
-    //     let theme = darkModeActive ? 'dark' : 'light';
-    //     document.body.id = theme;
-    // }, [darkModeActive]);
+  const showDrawer = () => {
+    setVisible(true);
+  };
 
-    return(
-        <div id="topbar">
-            <div className="settings">
-                <div className="mode-switch" onClick={() => toggleMode()}>
-                    {darkModeActive ? <><MoonIcon/> {t('dark')}</> : <><SunIcon/> {t('light')}</>}
-                </div>
-                
-                <Dropdown overlay={langs} trigger={['click']}><a title={t('lang')} onClick={e => e.preventDefault()}><GlobeAltIcon/></a></Dropdown>
-            </div>
-            {/* {t('lang')} */}
+  const onClose = () => {
+    setVisible(false);
+  };
+
+  const toggleMode = () => {
+    if (darkModeActive){
+      switchToLightMode();
+    } else {
+      switchToDarkMode();
+    }
+    let theme = darkModeActive ? 'dark' : 'light';
+    document.body.id = theme;
+  }
+      
+  useEffect(() => {
+    let theme = darkModeActive ? 'light' : 'dark';
+    document.body.id = theme;
+  }, []);
+      
+  useEffect( () => { document.body.className = i18n.language } );
+
+  return(
+    <div id="topbar">
+      <div className="settings">
+        <Tooltip placement="bottomLeft" title={darkModeActive ? `${t('dark')}` : `${t('light')}`}>
+          <div className="mode-switch" onClick={() => toggleMode()}>
+            {darkModeActive ? <MoonIcon/> : <SunIcon/>}
+          </div>
+        </Tooltip>
+
+        <Tooltip placement="bottomLeft" title={`${t('lang')}`}>
+          <Dropdown overlay={langs} trigger={['click']}><a onClick={e => e.preventDefault()}><GlobeAltIcon/></a></Dropdown>
+        </Tooltip>
+      </div>
             
-            <div className="menu">
-                {t('menu')}
-                <MenuIcon/>
-            </div>
-        </div>
-    )
+      <div className="menu" onClick={showDrawer}>
+        <Tooltip placement="bottomRight" title={`${t('menu')}`}>
+          <MenuIcon/>
+        </Tooltip>
+      </div>
+
+      <NavMenu onClose={onClose} visible={visible}/>
+    </div>
+  )
 }

@@ -2,21 +2,3 @@ $teal: #30CBAF;
 $cyan: #1DADCC;
 $blue: #306ECB;
 $indigo: #361DCC;
-
-@mixin light {
-    $text: black;
-    $bg: white;
-}
-
-@mixin dark {
-    $text: white;
-    $bg: black;
-}
-
-@mixin theme($dark:true){
-    @if $dark {
-        @include dark;
-    } @else {
-        @include light;
-    }
-}

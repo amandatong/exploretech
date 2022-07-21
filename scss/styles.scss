@@ -1,10 +1,13 @@
 @charset "utf-8";
 
 // import base@
-@import '~antd/dist/antd.css';
+// @import '~antd/dist/antd.css';
+    @import "~antd/dist/antd.dark.css";
 @import "./_fonts.scss";
 @import "./_colors.scss";
 @import "./_sizes.scss";
+@import "./light.scss";
+@import "./dark.scss";
 // @import "./_reset.scss";
 
 
@@ -13,3 +16,4 @@
 @import "./home.scss";
 // @import "./navbar.scss";
 // @import "./footer.scss";
+

@@ -6,9 +6,9 @@ export default function Layout({ children }) {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className={`${i18n.language}`}>
+    <>
         <Topbar/>
         <main>{children}</main>
-    </div>
+    </>
   )
 }
