@@ -63,22 +63,12 @@ a {
     
         $stroke: 1px;
     
-        a {
+        .link {
             text-transform:uppercase;
             font-weight:700;
             font-size:$title;
             text-shadow:1px 1px $dark-text, -1px -1px $dark-text;
             line-height:1;
-            
-            @supports(-webkit-text-stroke: 2px $dark-text){
-                color: $dark-bg !important;
-                -webkit-text-stroke: 2px $dark-text;
-                text-shadow:none;
-    
-                &:hover {
-                    -webkit-text-stroke-color: $blue;
-                }
-            }
         }
     }
 }

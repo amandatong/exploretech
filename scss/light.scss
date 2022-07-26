@@ -1,3 +1,5 @@
+@use "sass:meta";
+
 $light-text: black;
 $light-bg: white;
 
@@ -7,6 +9,21 @@ $light-bg: white;
 
     .links a {
         color:$light-bg;
+
+        @supports(-webkit-text-stroke: 2px $light-text){
+            color: $light-bg !important;
+            -webkit-text-stroke: 2px $light-text;
+            text-shadow:none;
+
+            &:hover {
+                background: linear-gradient($teal, $cyan);
+                background-size: 200% 200%;
+                background-clip:text;
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 5px transparent;
+            }
+        }
     }
     // @import './antd.scss';
+    @include meta.load-css("antd");
 }

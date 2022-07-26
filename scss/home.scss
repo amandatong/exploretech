@@ -40,6 +40,11 @@
             min-width:300px;
             width:25vw;
             border-radius:100px;
+            cursor:pointer;
+
+            &:hover {
+                background-color: $blue;
+            }
         }
     }
 }

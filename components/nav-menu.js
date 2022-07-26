@@ -19,10 +19,17 @@ export default function NavMenu({onClose, visible}) {
       }}>
         <div className="menu-container" >
           <div className="links">
-            <div onMouseEnter={() => onMouseEnter('home')} onMouseLeave={onMouseLeave} onClick={onClose}><Link href="/">{t('home')}</Link></div>
-            <div onMouseEnter={() => onMouseEnter('explore')} onMouseLeave={onMouseLeave} onClick={onClose}><Link href="/explore">{t('explore')}</Link></div>
-            <div onMouseEnter={() => onMouseEnter('future')} onMouseLeave={onMouseLeave} onClick={onClose}><Link href="/future">{t('future')}</Link></div>
+          {['home', 'explore', 'future'].map((key) =>{
+            return(
+              <div id={key} class="link" onMouseEnter={() => onMouseEnter(key)} onMouseLeave={onMouseLeave} onClick={onClose}><Link href={`/${key === 'home' ? '' : key}`}>{t(key)}</Link></div>
+            )
+          })}
+            {/* <div id="home" onMouseEnter={() => onMouseEnter('home')} onMouseLeave={onMouseLeave} onClick={onClose}><Link href="/">{t('home')}</Link></div>
+            <div id="explore" onMouseEnter={() => onMouseEnter('explore')} onMouseLeave={onMouseLeave} onClick={onClose}><Link href="/explore">{t('explore')}</Link></div>
+            <div id="future" onMouseEnter={() => onMouseEnter('future')} onMouseLeave={onMouseLeave} onClick={onClose}><Link href="/future">{t('future')}</Link></div> */}
           </div>
+
+          
         </div>
     </Drawer>
   )
