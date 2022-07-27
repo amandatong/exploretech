@@ -1,0 +1,26 @@
+#explore {
+    height:calc(100% - 2rem - 1em);
+    .page-title {
+        font-size:$page-title;
+        text-transform:uppercase;
+        text-align:center;
+        font-weight:700;
+    }
+    .links-wrap {
+        display:flex;
+        align-items: center;
+        width:100vw;
+        flex:1;
+
+        .link {
+            width:calc(100vw / 3);
+            flex:1;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            font-size:$button;
+            font-weight:600;
+        }
+    }
+}

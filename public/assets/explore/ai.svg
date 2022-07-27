@@ -1,0 +1,55 @@
+<svg width="310" height="355" viewBox="0 0 310 355" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="cube 2 (green)">
+<rect id="Rectangle 7" width="173.066" height="173.066" transform="matrix(0.866025 -0.5 0.866025 0.5 5.18775 263.44)" stroke="url(#paint0_linear_57_4229)" stroke-width="10" stroke-linejoin="bevel"/>
+<rect id="Rectangle 3" width="119.789" height="119.789" transform="matrix(0.866025 -0.5 2.20305e-08 1 154.781 176.123)" fill="url(#paint1_linear_57_4229)"/>
+<rect id="Rectangle 2" width="119.789" height="119.789" transform="matrix(0.866025 0.5 -2.20305e-08 1 51.0402 116.229)" fill="url(#paint2_linear_57_4229)"/>
+<rect id="Rectangle 1" width="119.789" height="119.789" transform="matrix(0.866025 -0.5 0.866025 0.5 51.0402 116.229)" fill="url(#paint3_linear_57_4229)"/>
+<g id="Rectangle 8" style="mix-blend-mode:screen" opacity="0.4">
+<rect width="119.789" height="119.789" transform="matrix(0.866025 -0.5 0.866025 0.5 51.4276 160.475)" fill="url(#paint4_linear_57_4229)"/>
+</g>
+<g id="Rectangle 9" style="mix-blend-mode:screen" opacity="0.4">
+<rect width="119.789" height="119.789" transform="matrix(0.866025 -0.5 0.866025 0.5 51.4276 203.526)" fill="url(#paint5_linear_57_4229)"/>
+</g>
+<rect id="Rectangle 4" width="173.002" height="172.59" transform="matrix(0.866025 -0.5 0.866025 0.5 5.18775 89.8184)" stroke="url(#paint6_linear_57_4229)" stroke-width="10" stroke-linejoin="bevel"/>
+<rect id="Rectangle 6" width="172.59" height="173.831" transform="matrix(0.866025 -0.5 2.20305e-08 1 155.481 176.113)" stroke="url(#paint7_linear_57_4229)" stroke-width="10" stroke-linejoin="bevel"/>
+<path id="Rectangle 5" d="M5.18775 93.851C5.18775 92.1942 6.35095 91.5226 7.78583 92.351L151.231 175.169C152.666 175.998 153.829 178.012 153.829 179.669L153.829 346.115C153.829 347.772 152.666 348.443 151.231 347.615L7.78582 264.797C6.35095 263.968 5.18775 261.954 5.18775 260.297L5.18775 93.851Z" stroke="url(#paint8_linear_57_4229)" stroke-width="10" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_57_4229" x1="86.5332" y1="0" x2="86.5332" y2="173.066" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint1_linear_57_4229" x1="142.292" y1="62.8351" x2="15.666" y2="153.105" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint2_linear_57_4229" x1="143.946" y1="-33.8584" x2="-58.3741" y2="-21.7516" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint3_linear_57_4229" x1="95.3024" y1="95.3024" x2="87.0182" y2="-46.4958" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint4_linear_57_4229" x1="95.3024" y1="95.3024" x2="87.0182" y2="-46.4958" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint5_linear_57_4229" x1="95.3024" y1="95.3024" x2="87.0182" y2="-46.4958" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint6_linear_57_4229" x1="86.5011" y1="0" x2="86.5011" y2="172.59" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint7_linear_57_4229" x1="86.2949" y1="0" x2="86.2949" y2="173.831" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+<linearGradient id="paint8_linear_57_4229" x1="79.5084" y1="133.76" x2="4.83718" y2="263.094" gradientUnits="userSpaceOnUse">
+<stop stop-color="#30CBAF"/>
+<stop offset="1" stop-color="#1DADCC"/>
+</linearGradient>
+</defs>
+</svg>

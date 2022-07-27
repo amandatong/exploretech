@@ -1,75 +1,16 @@
-
 body {
     font-style:normal;
     font-size:$body;
 }
 
-.en {
-    font-family:"poppins", sans-serif;
-}
-
-.ko {
-    font-family:"SourceHanSansK", sans-serif;
-}
+.en { font-family:"poppins", sans-serif; }
+.ko { font-family:"SourceHanSansK", sans-serif; }
 
 a {
     color: $cyan !important;
 
     &:hover {
         color: $blue !important;
-    }
-}
-
-#topbar {
-    padding:1rem;
-    // font-size:1.2em;
-    svg {
-        width: $body;
-        cursor:pointer;
-    }
-    display:flex;
-    justify-content: space-between;
-
-    .settings {
-        display:flex;
-    }
-}
-
-.ant-drawer-wrapper-body {
-    background-size:cover;
-    -webkit-transition: background-image 0.2s ease-in-out;
-    transition: background-image 0.2s ease-in-out;
-
-    .ant-drawer-header {
-        background-color:transparent !important;
-    }
-
-    &:hover {
-        -webkit-transition: background-image 0.2s ease-in-out;
-        transition: background-image 0.2s ease-in-out;
-    }
-}
-
-.menu-container {
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items: center;
-
-    .links {
-        display:flex;
-        flex-direction:column;
-        margin-left:2em;
-    
-        $stroke: 1px;
-    
-        .link {
-            text-transform:uppercase;
-            font-weight:700;
-            font-size:$title;
-            text-shadow:1px 1px $dark-text, -1px -1px $dark-text;
-            line-height:1;
-        }
     }
 }
 
