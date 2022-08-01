@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
-import { Drawer } from 'antd';
+import Drawer from 'antd/lib/drawer';
 import { XIcon } from '@heroicons/react/outline';
 
 export default function NavMenu({onClose, visible}) {
@@ -11,7 +11,7 @@ export default function NavMenu({onClose, visible}) {
   const onMouseEnter = (key) => setIsHovered(key);
   const onMouseLeave = () => setIsHovered(false);
 
-  const bg = "'/assets/nav/blank.svg'"
+  // const bg = ""
 
   return(
     <Drawer placement="right" onClose={onClose} visible={visible} width="100vw" mask={false} 

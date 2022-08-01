@@ -1,10 +1,13 @@
 body {
     font-style:normal;
     font-size:$body;
+    word-break:keep-all;
+    overflow:hidden;
+    height:100%;
 }
 
 .en { font-family:"poppins", sans-serif; }
-.ko { font-family:"SourceHanSansK", sans-serif; }
+.ko { font-family:"SourceHanSansK", sans-serif; line-height:1.6;}
 
 a {
     color: $cyan !important;
@@ -14,8 +17,17 @@ a {
     }
 }
 
+.page-title {
+    font-size:$page-title;
+    text-transform:uppercase;
+    text-align:center;
+    font-weight:700;
+}
+
+/*antdesign overrides*/
 .ant-tooltip-placement-bottomLeft, .ant-tooltip-placement-bottomRight {
     padding-top: 0px !important;
+    z-index: 1000 !important;
     
     &.ant-tooltip {
         line-height:initial !important;
@@ -30,5 +42,19 @@ a {
         min-height:initial !important;
         padding:6px 12px !important;
         border-radius:100px !important;
+    }
+}
+
+.ant-modal {
+    // transform-origin:50% 50%;
+    width:70vw !important;
+    max-width:1000px;
+
+    &-content {
+        border-radius:15px !important;
+    }
+
+    &-body {
+        font-size:calc($body - 2px) !important;
     }
 }

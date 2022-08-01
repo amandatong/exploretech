@@ -1,26 +1,48 @@
 #explore {
-    height:calc(100% - 2rem - 1em);
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     .page-title {
-        font-size:$page-title;
-        text-transform:uppercase;
-        text-align:center;
-        font-weight:700;
+        margin-top:-7rem;
+        margin-bottom:2rem;
     }
     .links-wrap {
         display:flex;
+        justify-content: center;
         align-items: center;
-        width:100vw;
+        // width:100vw;
         flex:1;
+        flex-wrap:wrap;
 
         .link {
-            width:calc(100vw / 3);
-            flex:1;
+            width:28vw;
+            // flex:1;
             display:flex;
             flex-direction: column;
             justify-content: center;
             align-items:center;
             font-size:$button;
             font-weight:600;
+            transition: all 0.5s ease-in-out;
+
+            @media screen and (max-width: $md){
+                width:100%;
+            }
+
+            &:hover {
+                transform: translateY(-5%);
+            }
+
+            .cube, .link-title { 
+                cursor:pointer; 
+                text-align:center;
+            }
+
+            .cube svg{
+                transform:scale(0.85);
+                margin-bottom:-2rem;
+            }
         }
     }
 }

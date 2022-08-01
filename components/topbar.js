@@ -3,7 +3,10 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { useDarkMode } from 'next-dark-mode';
 import { MoonIcon, SunIcon, GlobeAltIcon, MenuIcon } from '@heroicons/react/outline';
-import { Dropdown, Menu, Tooltip, Drawer } from 'antd';
+// import { Dropdown, Menu, Tooltip } from 'antd';
+import Dropdown from 'antd/lib/dropdown';
+import Menu from 'antd/lib/menu';
+import Tooltip from 'antd/lib/tooltip';
 import NavMenu from './nav-menu';
 
 const langs = (
@@ -53,22 +56,24 @@ export default function Topbar() {
 
   return(
     <div id="topbar">
-      <div className="settings">
-        <Tooltip placement="bottomLeft" title={darkModeActive ? `${t('dark')}` : `${t('light')}`}>
-          <div className="mode-switch" onClick={() => toggleMode()}>
-            {darkModeActive ? <MoonIcon/> : <SunIcon/>}
-          </div>
-        </Tooltip>
+      <div className="topbar-wrap">
+        <div className="settings">
+          <Tooltip placement="bottomLeft" title={darkModeActive ? `${t('dark')}` : `${t('light')}`}>
+            <div className="mode-switch" onClick={() => toggleMode()}>
+              {darkModeActive ? <MoonIcon/> : <SunIcon/>}
+            </div>
+          </Tooltip>
 
-        <Tooltip placement="bottomLeft" title={`${t('lang')}`}>
-          <Dropdown overlay={langs} trigger={['click']}><a onClick={e => e.preventDefault()}><GlobeAltIcon/></a></Dropdown>
-        </Tooltip>
-      </div>
-            
-      <div className="menu" onClick={showDrawer}>
-        <Tooltip placement="bottomRight" title={`${t('menu')}`}>
-          <MenuIcon/>
-        </Tooltip>
+          <Tooltip placement="bottomLeft" title={`${t('lang')}`}>
+            <Dropdown overlay={langs} trigger={['click']}><a onClick={e => e.preventDefault()}><GlobeAltIcon/></a></Dropdown>
+          </Tooltip>
+        </div>
+              
+        <div className="menu" onClick={showDrawer}>
+          <Tooltip placement="bottomRight" title={`${t('menu')}`}>
+            <MenuIcon/>
+          </Tooltip>
+        </div>
       </div>
 
       <NavMenu onClose={onClose} visible={visible}/>

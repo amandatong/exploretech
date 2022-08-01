@@ -1,0 +1,22 @@
+{
+    "title": "Metaverse",
+    "intro": "The metaverse is the concept of a connected, immersive Internet, where people can seamlessly connect with others and browse the web all within a virtual world. It is usually based on some sort of extended reality (AR, VR, MR), avatars that are a virtual representation of yourself, and having some sort of ownership in the Internet space (blockchain). The metaverse is meant to match reality in nearly every aspect, except that it is not physical.",
+    "xr" : {
+        "title": "Extended Reality",
+        "desc": "There are three main types of extended reality: Augmented Reality (AR), Virtual Reality (VR), and Mixed Reality (MR).\n\nClick the devices to learn more about each technology.",
+        "ar": "Augmented Reality",
+        "ar_desc": "Augmented reality (AR) is the concept of projecting digital, computer-generated content into the real world. Rather than directly placing you into a virtual world, AR seeks to enhance the world already around you. AR is accessible by common technology like smartphones and tablets.",
+        "ar_how": "AR uses computer vision to recognize an environment so the system knows where to place digital content in a realistic way. Some AR applications rely on physical markers like QR codes to know where to display information.",
+        "vr": "Virtual Reality",
+        "vr_desc": "Virtual reality (VR) is a computer-generated simulation for someone to experience and interact with. Most modern iterations use auditory and visual feedback to immerse a user, but others are beginning to experiment with other sensory feedback. VR offers near-total escapism from reality, placing its users into pre-programmed environments.",
+        "vr_how": "VR relies on a user wearing a headset over their eyes and ears. The headset has internal screens and stereo sound to display an environment in first-person point of view. It can track the user's head motions through sensors for angle and velocity. Many headsets also come with controllers, whose positions are tracked by outward-facing cameras using computer vision. Other headsets have eye-tracking capabilities. ",
+        "mr": "Mixed Reality",
+        "mr_desc": "Mixed reality (MR) combines the physical and digital world. It's often the name for a kind of technology that is beyond AR, yet does not entirely immerse you like VR. Modern MR technology use see-through, hands-free displays mounted on glasses-like headsets that can project AR objects for the user to interact with. MR is commonly imagined with 3D holograms and digital displays.",
+        "mr_how": "These digital 3D models can be interacted with using inputs like gaze, gesture, and speech. MR devices like smart glasses are able to render these models and interactions by sensing light and location to make them appear real."
+    },
+    "avatars" : {
+        "title": "Avatars",
+        "desc": "Avatars are ways of representing yourself in a virtual world. Much like how video games may allow you to customize your appearance, avatars in the metaverse are meant to be a reflection of you, and you should be able to change it any time.",
+        "instructions": "Click on the arrows to change different parts of the avatar's appearance."
+    }
+}

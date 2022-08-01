@@ -9,19 +9,21 @@ export default function Explore() {
 
     return (
       <main id="explore">
-        <div className="page-title">{t('title')}</div>
+        <div classname="explore-wrap">
+          <div className="page-title">{t('title')}</div>
 
-        <div className="links-wrap">
-          {[{key:'ai',cube:<AICube/>},{key:'metaverse', cube:<MetaverseCube/>},{key:'digital-twin',cube:<DTCube/>}].map((topic) => {
-          return(
-            <Link key={topic.key} href={`/${topic.key}`} passHref>
-              <div id={topic.key} className="link">
-                <div className="cube">{topic.cube}</div>
-                <div className="link-title">{t(topic.key)}</div>
-              </div>
-            </Link>
-          )
-          })}
+          <div className="links-wrap">
+            {[{key:'ai',cube:<AICube/>},{key:'metaverse', cube:<MetaverseCube/>},{key:'digital-twin',cube:<DTCube/>}].map((topic) => {
+            return(
+              <Link key={topic.key} href={`/${topic.key}`} passHref>
+                <div id={topic.key} className="link">
+                  <div className="cube">{topic.cube}</div>
+                  <div className="link-title">{t(topic.key)}</div>
+                </div>
+              </Link>
+            )
+            })}
+          </div>
         </div>
       </main>
     )

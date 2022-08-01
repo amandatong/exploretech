@@ -29,7 +29,7 @@
                 
                 &.home:hover { @include colored-stroke($teal, $cyan); }
                 &.explore:hover { @include colored-stroke($cyan, $blue); }
-                &.future:hover { @include colored-stroke($blue, $indigo); }
+                &.future:hover { @include colored-stroke($periwinkle, $indigo); }
             }
         }
 
@@ -37,5 +37,11 @@
             text-shadow:1px 1px $text, -1px -1px $text;
         }
     }
-    @include meta.load-css($src);
+
+    .page-jumper {
+        background-color: rgba(gray, 0.3);
+    }
+
+    #metaverse a { color: $text !important; }
+    // @include meta.load-css($src);
 }

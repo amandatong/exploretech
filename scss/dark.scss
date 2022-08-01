@@ -1,4 +1,4 @@
 $dark-text: white;
-$dark-bg: black;
+$dark-bg: #1f1f1f;
 
 #dark { @include theme($dark-text, $dark-bg, "~antd/dist/antd.dark"); }
