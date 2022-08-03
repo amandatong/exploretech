@@ -24,6 +24,13 @@ a {
     font-weight:700;
 }
 
+.section-title {
+    font-size:$subsection;
+    font-weight:700;
+    line-height:initial;
+    text-transform: uppercase;
+}
+
 /*antdesign overrides*/
 .ant-tooltip-placement-bottomLeft, .ant-tooltip-placement-bottomRight {
     padding-top: 0px !important;

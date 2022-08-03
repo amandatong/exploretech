@@ -1,0 +1,200 @@
+#digital-twin {
+    // display:flex;
+    overflow-y:scroll;
+    // flex-direction: column;
+    height:100vh;
+    -ms-overflow-style: none;
+    scrollbar-width:none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .desktop {
+        @media screen and (max-width:$md){
+            display:none;
+        }
+    }
+
+    .mobile {
+        display:none;
+        @media screen and (max-width:$md){
+            display:initial;
+        }
+    }
+
+    .dt_intro {
+        display:flex;
+        align-items: center;
+        min-height:100vh;
+
+        @media screen and (max-width:$md){
+            flex-direction:column;
+            padding:5vw;
+        }
+        
+        &-text {
+            width:55%;
+            padding-left: 5vw;
+            padding-right:5vw;
+            .page-title { 
+                text-align:left; line-height:1.1;margin-bottom:1rem; 
+            }
+            @media screen and (max-width:$md){
+                padding: 5vw;
+                width:100%;
+                text-align:center;
+                .page-title { text-align:center; line-height:1; }
+            }
+        }
+
+        .blobs {
+            margin-top:-5rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            height:100vh;
+            flex:1;
+            @media screen and (max-width:$md){
+                width:100%;
+                justify-content:space-between;
+            }
+
+            .blob-contain { 
+                // position:relative;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                // transform:scale(0.85); 
+                // @media screen and (max-width:$md){
+                //     transform:scale(0.6);
+                // }
+                
+                svg { 
+                    transform:scale(0.85); 
+                    @media screen and (max-width:calc($lg + 350px)){
+                        transform:scale(0.8); 
+                    }
+                    @media screen and (max-width:$md){
+                        transform:scale(0.7);
+                    }
+                    @media screen and (max-width:$sm){
+                        transform:scale(0.6);
+                    }
+                }
+
+                
+            }
+
+            .physical {
+                background-image:url('/assets/digital-twin/platform.svg');
+                background-position:center bottom;
+                background-repeat:no-repeat;
+                background-size: 45vmin auto ;
+                padding-bottom:3vmin;
+                svg {
+                    padding-top:1vw;
+                }
+                @media screen and (max-width:$md){
+                    padding-bottom:0;
+                    background-size: 65vmin auto;
+                }
+                @media screen and (max-width:$sm){
+                    background-size: 80vmin auto;
+                    svg {
+                        padding-top:10vw;
+                    }
+                }
+                @media screen and (max-width:397px){
+                    background-size: 80vmin auto;
+                    svg {
+                        padding-top:15vw;
+                    }
+                }
+            }
+
+            .digital {
+                background-image:url('/assets/digital-twin/frame.svg');
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size: 45vmin auto ;
+                @media screen and (max-width:$md){
+                    background-size: 65vmin auto;
+                }
+                @media screen and (max-width:$sm){
+                    background-size: 80vmin auto;
+                }
+            }
+        }
+
+    }
+
+    .iot {
+        min-height:100vh;
+        padding:5vw;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .iot-desc {
+            margin-top:2rem;
+            width:80vmin;
+        }
+
+        .physical {
+            width:60vmin;
+            background-image:url('/assets/digital-twin/platform.svg');
+            background-position:center bottom;
+            background-repeat:no-repeat;
+            background-size: 55vmin auto ;
+            padding-bottom:3vmin;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img { width: 47vmin;margin-left:-1vmin; }
+        }
+
+        .input-lines {
+            margin-top:-4vw;
+            z-index:-1;
+            max-width:100%;
+
+            &.bottom {
+                margin-top:4vmin;
+            }
+        }
+
+        .inputs {
+            width:100%;
+            display:flex;
+            justify-content: center;
+
+            @media screen and(max-width:$md) {
+                flex-direction: column;
+            }
+
+            .inputs-wrap {
+                display:flex;
+                justify-content: center;
+
+                .input {
+                    flex:1;
+                }
+            }
+
+            .desc { margin-top:4vmin;}
+
+            @media screen and (max-width:$md) {
+                .desc { width: 100%; }
+            }
+        }
+    }
+
+    .subsection-title {
+        font-size:$button;
+        font-weight:600;
+    }
+}
