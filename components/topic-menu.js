@@ -7,7 +7,7 @@ export default function TopicMenu({active}) {
       <div className="page-jumper">
         {['ai', 'metaverse', 'digital-twin'].map((key, index) => {
             return(
-                <><Link href={`/${key}`}>{index == active ? <ColoredCube className="active"/> : <CubeIcon/>}</Link></>
+                <><Link key={`${key}_topic`} href={`/${key}`}>{index == active ? <ColoredCube className="active"/> : <CubeIcon/>}</Link></>
             )
         })}
       </div>

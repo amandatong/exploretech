@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useState } from 'react';
+import React, { useRef, useCallback, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import Mountains from '../public/assets/metaverse/mountains.svg';

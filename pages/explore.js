@@ -16,7 +16,7 @@ export default function Explore() {
             {[{key:'ai',cube:<AICube/>},{key:'metaverse', cube:<MetaverseCube/>},{key:'digital-twin',cube:<DTCube/>}].map((topic) => {
             return(
               <Link key={topic.key} href={`/${topic.key}`} passHref>
-                <div id={topic.key} className="link">
+                <div id={`${topic.key}_link`} className="explore_link">
                   <div className="cube">{topic.cube}</div>
                   <div className="link-title">{t(topic.key)}</div>
                 </div>

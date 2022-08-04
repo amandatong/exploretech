@@ -157,13 +157,32 @@
             img { width: 47vmin;margin-left:-1vmin; }
         }
 
+        .digital {
+            width:60vmin;
+            background-image:url('/assets/digital-twin/frame.svg');
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size: 60vmin auto;
+            // padding-bottom:3vmin;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img { width: 47vmin;margin-left:-1vmin; }
+        }
+
         .input-lines {
-            margin-top:-4vw;
+            margin-top:-6vw;
             z-index:-1;
             max-width:100%;
 
             &.bottom {
                 margin-top:4vmin;
+            }
+
+            &.connect {
+                margin-top:initial;
             }
         }
 
@@ -178,6 +197,7 @@
 
             .inputs-wrap {
                 display:flex;
+                align-items:center;
                 justify-content: center;
 
                 .input {
@@ -189,6 +209,66 @@
 
             @media screen and (max-width:$md) {
                 .desc { width: 100%; }
+                .inputs-wrap {flex-wrap:wrap}
+                lord-icon {
+                    min-width:150px;
+                    min-height:150px;
+                }
+            }
+        }
+
+        .connect, .connect-wrap {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            .desc {
+                margin:4vmin;
+                width:40%;
+                @media screen and(max-width:$md) {
+                    width:100%;
+                }
+            }
+        }
+
+        .connect {
+            @media screen and (max-width:$md) {
+                flex-direction: column;
+
+                .desc {
+                    margin-top:0;
+                    margin-bottom:6vmin;
+                    padding:1rem;
+                }
+
+                lord-icon {
+                    min-width:200px;
+                    min-height:200px;
+                }
+            }
+        }
+
+        .analyze {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            margin:4vmin;
+
+            .desc {
+                width:55%;
+                padding:1rem;
+                @media screen and (max-width:$md) {
+                    width:100%;
+                }
+            }
+        }
+
+        .conclusion {
+            margin:4vmin;
+            padding:1rem;
+            width:55%;
+            font-size:calc($body + 7px);
+            @media screen and (max-width:$md) {
+                width:100%;
             }
         }
     }

@@ -27,7 +27,7 @@ export default function NavMenu({onClose, visible}) {
             <div className="links">
               {['home', 'explore', 'future'].map((key) =>{
                 return(
-                  <div id={key} key={key} class="link" onMouseEnter={() => onMouseEnter(key)} onMouseLeave={onMouseLeave} onClick={onClose}><Link href={`/${key === 'home' ? '' : key}`}><a class={key}>{t(key)}</a></Link></div>
+                  <div id={`${key}_drawer`} key={key} class="link" onMouseEnter={() => onMouseEnter(key)} onMouseLeave={onMouseLeave} onClick={onClose}><Link href={`/${key === 'home' ? '' : key}`}><a class={key}>{t(key)}</a></Link></div>
                 )
               })}
             </div>

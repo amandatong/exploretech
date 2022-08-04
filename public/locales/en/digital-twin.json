@@ -10,7 +10,7 @@
         },
         "connect" : {
             "title": "Connect",
-            "desc": "The data is sent across a network to be gathered with previous data. This data will inform the digital twin model so that it reflects the current state of its physical counterpart."
+            "desc": "The data is sent across an Internet network, using connections like Bluetooth, to be gathered with previous data. This data will inform the digital twin model so that it reflects the current state of its physical counterpart."
         },
         "analyze": {
             "title": "Analyze",
