@@ -144,13 +144,13 @@
     }
 
     #avatars {
-        flex: 0 0 100vw;
+        flex: 0 0 70vw;
 
         .avatars_wrapper {
             display:flex;
             flex-direction: column;
             height:100vh;
-            padding:5rem 0;
+            padding:5rem;
 
             .customize_wrap {
                 flex:1 1 auto;
@@ -158,6 +158,7 @@
                 justify-content:center;
                 align-items: center;
                 flex-direction: column;
+                user-select: none;
 
                 .customize-box-wrap {
                     display:flex;
@@ -195,6 +196,59 @@
             }
         }
 
+    }
+
+    #coins-divider {
+        margin:0 5rem;
+        flex: 0 0 50vmin;position:relative;height:100vh;
+        svg, div { position:absolute; }
+        #coin1 { width:30vmin;height:30vmin;bottom:0; background-image:url('/assets/metaverse/coin_1.svg');background-size:cover;}
+        #coin2 { width:42vmin;height:40vmin;bottom: 30vh; left:10vmin;background-image:url('/assets/metaverse/coin_2.svg');background-size:cover;}
+        #coin3 { width:15vmin;height:8vmin;top: 40vh; left: 2vw;background-image:url('/assets/metaverse/coin_3.svg');background-size:cover;}
+        #coin4 { width:25vmin;height:35vmin;top:0;left:0;background-image:url('/assets/metaverse/coin_4.svg');background-size:cover;}
+        #coin5 { width:20vmin;height:20vmin;bottom: 32vh; left: -8.5vw;background-image:url('/assets/metaverse/coin_5.svg');background-size:cover;}
+    }
+
+    #ownership {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 0 60vw;
+        min-width:800px;
+        padding:5rem;
+
+        .ownership_intro { margin-top:2.5rem;text-align:right; min-width:600px;width:45vw; .ownership_desc { margin:1.5rem 0; } }
+        .blockchain-desktop { 
+            margin-top:2.5rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:82vh;
+            height:48vh;
+            background-image:url('/assets/metaverse/laptop.svg');
+            background-size:82vh auto;
+            background-repeat:no-repeat;
+            user-select:none;
+            .text { 
+                width:420px;
+                text-align:center;
+                background: -webkit-linear-gradient($cyan, $blue);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight:600;
+                font-size:$subsection;
+                text-transform:uppercase;
+                cursor:pointer;
+            } 
+        }
+    }
+    
+    .reveal_next { 
+        background-color:$cyan;
+        &:hover {
+            background-color:$blue;
+        }
     }
 }
 

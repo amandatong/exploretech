@@ -17,6 +17,8 @@
             "desc": "Using collected data, a model of the object is created. It can then be visualized, use AI to create predictions on potential problems or results, and respond to test variables manipulated by a user."
         },
         "output": "The information from digital twin simulations will inform the decisions made on its physical equivalent. As the physical world changes and updates, so too will the digital twin."
-
-    }
+    },
+    "role": "Role in Manufacturing",
+    "role_desc" : "A digital twin can be used to simulate different logistics, modelling production of different models to determine the best way to manufacture a product. It can identify inefficiencies and cut costs.",
+    "next": "What's next?"
 }

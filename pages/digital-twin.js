@@ -1,21 +1,46 @@
 import { useState, useRef, useEffect } from 'react';
-import TopicMenu from '../components/topic-menu';
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+
+import TopicMenu from '../components/topic-menu';
+
+import { ArrowRightIcon } from '@heroicons/react/outline';
 import Blob from '../public/assets/digital-twin/blob_1.svg';
+
 import dynamic from 'next/dynamic';
 const DynamicLordIcon = dynamic(() => import('../components/LordIcon'), {
     ssr: false
 });
 
 const delay = 3100;
-const leftConnect = ["/assets/lotties/bluetooth.json", "/assets/lotties/wireless.json"]
+const leftConnect = ["/assets/lotties/bluetooth.json", "/assets/lotties/wireless.json"];
 const icons_width = {width:'16vw', height:'16vw'};
 
 export default function DigitalTwin() {
-    const { t, i18n } = useTranslation('digital-twin');
+    const { t, i18n } = useTranslation(['digital-twin']);
     const [connectIndex, setConnectIndex] = useState(0);
     const [blobIndex, setBlobIndex] = useState(1);
+    const [showBottom, setShowBottom] = useState(false);
     const timeoutRef = useRef(null);
+
+    const showBottomNav = () => {
+        setShowBottom(true);
+    }
+    const hideBottomNav = () => {
+        setShowBottom(false);
+    }
+
+    const handleScroll = (e) => {
+        const bottom = Math.abs(e.target.scrollHeight - (e.target.scrollTop + e.target.clientHeight)) <= 1;
+        if (bottom) { 
+            showBottomNav();
+            console.log('got to bottom')
+        } else {
+            if(showBottom){
+                hideBottomNav();
+            }
+        }
+    }
 
     let default_blob = "/assets/digital-twin/blob_1.svg";
 
@@ -54,7 +79,7 @@ export default function DigitalTwin() {
     return(
         <>
         <TopicMenu active="2"/>
-        <main id="digital-twin">
+        <main id="digital-twin" onScroll={handleScroll}>
             <div style={{display:'none'}}><DynamicLordIcon /></div>
             <div className="dt_intro">
                 <div className="dt_intro-text desktop">
@@ -135,8 +160,11 @@ export default function DigitalTwin() {
                 </div>
                 <img src="/assets/digital-twin/connect_line.svg" className="input-lines connect"/>
                 <div className="analyze">
-                    <div onClick={() => changeBlob()} className="digital">
+                    {/* <div onClick={() => changeBlob()} className="digital">
                         <img className="blob" src={`/assets/digital-twin/blob_${blobIndex}.svg`}/>
+                    </div> */}
+                    <div className="digital">
+                        <img className="blob" src={`/assets/digital-twin/blob_1.svg`}/>
                     </div>
                     <div className="desc">
                         <div className="subsection-title">{t('iot.analyze.title')}</div>
@@ -147,7 +175,24 @@ export default function DigitalTwin() {
                 <div className="conclusion">
                     {t('iot.output')}
                 </div>
+                <div className="manufacturing">
+                    <div className="role-blobs">
+                        <div className="physical">
+                            <img className="blob" src="/assets/digital-twin/blob_1.svg"/>
+                        </div>
+                        <div className="digital">
+                            <img className="blob" src={`/assets/digital-twin/blob_1.svg`}/>
+                        </div>
+                    </div>
+                    <div className="desc">
+                        <div className="section-title">{t('role')}</div>
+                        <div className="section-desc">{t('role_desc')}</div>
+                    </div>
+                </div>
             </div>
+            <Link href="/future" passHref>
+                <div className={`reveal_next ${showBottom ? 'show' : 'hide'}`}>{t('next')} <ArrowRightIcon/></div>
+            </Link>
         </main>
         </>
         

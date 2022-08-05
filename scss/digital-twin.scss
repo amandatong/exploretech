@@ -271,10 +271,56 @@
                 width:100%;
             }
         }
+
+        .manufacturing {
+            margin-top:10vmax;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom:5vmax;
+            .role-blobs {
+                display:flex;
+                margin-bottom:3rem;
+
+                .physical, .digital { width:50vmin; background-size: 45vmin auto; img { width: 40vmin; } }
+
+                @media screen and (max-width:$md) {
+                    
+                }
+            }
+
+            .desc {
+                display:flex; flex-direction: column; align-items: center;
+                width:100vw;
+                padding:1rem;
+                .section-title {
+                    margin:1rem;
+
+                    @media screen and (max-width:$sm) {
+                        font-size:calc($subsection - 3vh)
+                    }
+                }
+
+                .section-desc {
+                    width:75%;
+
+                    @media screen and (max-width:$md) {
+                        width:100%;
+                    }
+                }
+            }
+        }
     }
 
     .subsection-title {
         font-size:$button;
         font-weight:600;
+    }
+
+    .reveal_next { 
+        background-color:$blue;
+        &:hover {
+            background-color:$indigo;
+        }
     }
 }

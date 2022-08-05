@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Topbar/>
-      <main>{children}</main>
+      {children}
     </>
   )
 }

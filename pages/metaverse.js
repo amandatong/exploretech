@@ -1,14 +1,20 @@
 import React, { useRef, useCallback, useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import Mountains from '../public/assets/metaverse/mountains.svg';
 import Waves from '../public/assets/metaverse/waves.svg';
+import Coin1 from '../public/assets/metaverse/coin_1.svg';
+import Coin2 from '../public/assets/metaverse/coin_2.svg';
+import Coin3 from '../public/assets/metaverse/coin_3.svg';
+import Coin4 from '../public/assets/metaverse/coin_4.svg';
+import Coin5 from '../public/assets/metaverse/coin_5.svg';
 import { ArrowRightIcon, XIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline';
 import Modal from 'antd/lib/modal';
 
 const NUM_FACES = 17;
 
-export default function Explore() {
+export default function Metaverse() {
     const { t, i18n } = useTranslation('metaverse');
     const containerRef = useRef();
     const onWheel = useCallback(e => {
@@ -22,6 +28,7 @@ export default function Explore() {
 
     const [isModalVisible, setIsModalVisible] = useState('');
     const [avatarFace, setAvatarFace] = useState(1);
+    const [showBottom, setShowBottom] = useState(false);
 
     function avatarFwd() {
         let newFace = avatarFace + 1;
@@ -39,10 +46,29 @@ export default function Explore() {
         setAvatarFace(newFace);
     }
 
+    const showBottomNav = () => {
+        setShowBottom(true);
+    }
+    const hideBottomNav = () => {
+        setShowBottom(false);
+    }
+
+    const handleScroll = (e) => {
+        const bottom = Math.abs(e.target.scrollWidth - (e.target.scrollLeft + e.target.clientWidth)) <= 1;
+        if (bottom) { 
+            showBottomNav();
+            console.log('got to bottom')
+        } else {
+            if(showBottom){
+                hideBottomNav();
+            }
+        }
+    }
+
     return (
       <>
       <TopicMenu active="1"/>
-      <main id="metaverse" ref={containerRef} onWheel={onWheel}>
+      <main id="metaverse" ref={containerRef} onWheel={onWheel} onScroll={handleScroll}>
         <div className="intro-wrapper">
             <div className="intro">
                 <div className="center-container">
@@ -108,9 +134,29 @@ export default function Explore() {
                 </div>
             </div>
         </div>
-        <div id="ownership" className="section">
-            section about ownership
+        <div id="coins-divider" className="section">
+            <div id="coin1"/>
+            <div id="coin2"/>
+            <div id="coin3"/>
+            <div id="coin4"/>
+            <div id="coin5"/>
         </div>
+        <div id="ownership" className="section">
+            <div className="ownership_intro">
+                <div className="section-title">{t('ownership.title')}</div>
+                <div className="ownership_desc">{t('ownership.desc')}</div>
+            </div>
+            <div className="blockchain-desktop">
+                <div className="text">{t('ownership.blockchain')}</div>
+            </div>
+        </div>
+        <div id="manufacturing" className="section">
+            role in manufacturing
+        </div>
+        
+        <Link href="/digital-twin" passHref>
+            <div className={`reveal_next ${showBottom ? 'show' : 'hide'}`}>{t('next')} <ArrowRightIcon/></div>
+        </Link>
       </main>
       </>
     )

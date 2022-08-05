@@ -18,5 +18,11 @@
         "title": "Avatars",
         "desc": "Avatars are ways of representing yourself in a virtual world. Much like how video games may allow you to customize your appearance, avatars in the metaverse are meant to be a reflection of you, and you should be able to change it any time.",
         "instructions": "Click on the arrows to change different parts of the avatar's appearance."
-    }
+    },
+    "ownership" : {
+        "title": "Ownership",
+        "desc": "Ownership is the idea that you own some sort of digital asset within the metaverse, that is not tied to physicality. Popular kinds of ownership often mentioned are cryptocurrency and NFTs, both of which rely on blockchain technology. These assets are meant to be carried from one virtual world to the next.",
+        "blockchain": "What is blockchain?"
+    },
+    "next": "Up Next: Digital Twin"
 }

@@ -31,6 +31,33 @@ a {
     text-transform: uppercase;
 }
 
+.reveal_next {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:2rem;
+    font-size:$button;
+    font-weight:600;
+    text-transform: uppercase;
+    line-height:1;
+    cursor:pointer;
+    text-align:center;
+    transform:translateY(150px);
+
+    svg { width:2rem;}
+
+    &.show {
+        transform: translateY(0);
+        transition: all 0.7s ease-in-out;
+    }
+
+    &.hide {
+        // display:none;
+        transform: translateY(180px);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
 /*antdesign overrides*/
 .ant-tooltip-placement-bottomLeft, .ant-tooltip-placement-bottomRight {
     padding-top: 0px !important;

@@ -9,7 +9,7 @@ export default function Explore() {
 
     return (
       <main id="explore">
-        <div classname="explore-wrap">
+        <div className="explore-wrap">
           <div className="page-title">{t('title')}</div>
 
           <div className="links-wrap">
