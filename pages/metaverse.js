@@ -114,7 +114,7 @@ export default function Metaverse() {
             </div>
         </div>
         <div className="divider">
-            <Waves class="waves-divider"/>
+            <Waves className="waves-divider"/>
         </div>
         <div id="avatars" className="section">
             <div className="avatars_wrapper">

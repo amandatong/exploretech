@@ -43,5 +43,12 @@
     }
 
     #metaverse a { color: $text !important; }
+
+    #ai {
+
+        .ml_cards .cards .card {
+            background-color:$bg;
+        }
+    }
     // @include meta.load-css($src);
 }

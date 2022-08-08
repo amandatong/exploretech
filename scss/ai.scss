@@ -1,0 +1,165 @@
+#ai {
+    overflow-y:scroll;
+    height:100vh;
+    -ms-overflow-style: none;
+    scrollbar-width:none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nn {
+        position:absolute;top:0;z-index:-5;
+        width:100vw;
+    }
+
+    .ai_intro {
+        background:url("/assets/ai/neural_net.svg") no-repeat;
+        background-size:cover;
+        background-position:bottom center;
+        // background-position:0 calc(-400px + 1vw);
+        position:relative;
+        width:100vw;
+        height:170vmin;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index:1;
+                
+        @media screen and (max-width:$md) { background-position:0 -480px;padding-top:20rem;height:100vh; }
+        @media screen and (max-width:$sm) { background-size:100% auto;background-position:0 -310px;}
+        
+        .intro-right {
+            padding-right:5rem;
+            // margin-top:34vmin;
+            width:55vw;
+            height:100vh;
+            display:flex;flex-direction: column;align-items: center;
+            @media screen and (max-width:$md) {
+                width:100vw;
+                padding:0 5rem;
+            }
+
+            .intro-wrap {
+                height:20vw;
+            }
+
+            .page-title {
+                text-align:left;
+                line-height:1.1;
+                margin-bottom:2rem;
+                
+                @media screen and (max-width:$md) { text-align: center; }
+            }
+        }
+    }
+
+    .ml_intro_wrap {
+        display:flex;
+        width:100vw;
+        height:100vh;
+        align-items: center;
+        justify-content: center;
+        margin-top:-70vmin;
+        z-index:999;
+
+        .ml_intro {
+            width:45vw;padding-left:5rem;
+            margin-right:5rem;
+            display:flex;flex-direction: column;align-items: center;
+            @media screen and (max-width:$md) {
+                width:100vw;
+                padding:5rem;
+                margin-right:0;
+            }
+
+            .section-title {align-self:flex-start}
+            .desc { margin-top:1.5rem;}
+
+            .ex-button { 
+                display:flex;align-items: center;justify-content: center;
+                margin-top:1rem;
+                font-size:$subtitle;font-weight:600;text-transform:uppercase;
+                background:linear-gradient($teal, $cyan);
+                z-index:999999999999;
+                width:auto;
+                text-align:center;
+                border-radius:25px;
+                padding:1rem 2rem;
+                line-height:1;
+                cursor:pointer;
+                svg { width:2rem;margin-left:1rem;}
+                &:hover { background:linear-gradient($cyan, $blue)}
+            }
+        }
+
+        @media screen and (max-width:$md) { margin-top:0;flex-direction:column-reverse; }
+
+        .sticky {
+            position:fixed !important;
+            top:16vw;
+            right:5vw;
+        }
+
+        .ml_cards {
+            height:30vh;
+            position:relative;
+            width:40vw;
+
+            @media screen and (max-width:$md) { width:80vw; }
+
+            .cards {
+                position:absolute;
+                .card {
+                    border:2px solid;
+                    min-width:200px;
+                    width:25vw;
+                    min-height:150px;
+                    height:15vw;
+                    border-radius:20px;
+                    position:absolute;
+                    padding:1rem;
+
+
+                    &.one {
+                        border-color:$teal;z-index:4;margin-top:20px;margin-left:20px;
+
+                        .animal-contain {
+                            border-radius:inherit;
+                            height:calc(15vw - 2rem);
+                            background:linear-gradient(rgba(gray, 0.2), transparent);
+                            display:flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                    &.two { border-color:$cyan;z-index:3;margin-top:10px;margin-left:10px;}
+                    &.three { border-color: $blue;}
+                }
+                
+                &.one {
+                    top:-6vw;
+                    transform:rotate(-10deg);
+                    z-index:9999;
+                }
+
+                &.two {
+                    top:6vw;
+                    right:25vw;
+                    transform:rotate(10deg);
+                    z-index:9999;
+                }
+            }
+        }
+    }
+
+    .machine-learning {
+        height:100vh;
+    }
+
+    .reveal_next { 
+        background-color:$teal;
+        &:hover {
+            background-color:$cyan;
+        }
+    }
+}

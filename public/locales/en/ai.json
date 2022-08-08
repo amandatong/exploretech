@@ -1,0 +1,12 @@
+{
+    "title": "AI & Big Data",
+    "desc": {
+        "ai": "Artificial intelligence (AI) is when a computer program is taught to “think” like a human and based on its teachings be able to perform tasks unique to humans, such as problem-solving. Artificial intelligence is associated with machine learning.",
+        "big_data": "Big data is a concept in which large amounts of information are gathered in order to find patterns and connections within the data. "
+    },
+    "ml": {
+        "title": "Machine Learning",
+        "desc": "Machine learning is a technique in which you show a program what is and is not what it wants to identify. Based on that data, it will begin to make its own assumptions on what “is” and “is not.”"
+    },
+    "next": "up next: metaverse"
+}

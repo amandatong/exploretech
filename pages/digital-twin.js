@@ -34,7 +34,6 @@ export default function DigitalTwin() {
         const bottom = Math.abs(e.target.scrollHeight - (e.target.scrollTop + e.target.clientHeight)) <= 1;
         if (bottom) { 
             showBottomNav();
-            console.log('got to bottom')
         } else {
             if(showBottom){
                 hideBottomNav();
