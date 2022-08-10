@@ -1,12 +1,44 @@
 {
-    "title": "AI & Big Data",
-    "desc": {
-        "ai": "Artificial intelligence (AI) is when a computer program is taught to “think” like a human and based on its teachings be able to perform tasks unique to humans, such as problem-solving. Artificial intelligence is associated with machine learning.",
-        "big_data": "Big data is a concept in which large amounts of information are gathered in order to find patterns and connections within the data. "
-    },
-    "ml": {
+  "title": "AI & Big Data",
+  "desc": {
+    "ai": "Artificial intelligence (AI) is a field of computer science that involves developing computer programs to perform tasks that are unique to human intelligence. Subfields of AI include producing and understanding human language, visual perception, and decision-making. Popular examples of AI include YouTube's and Netflix's algorithms to recommend videos to its users, robots taught to win against humans at games like chess and Go, phone assistants like Siri, and the development of self-driving cars.",
+    "big_data": "Big data is a concept in which large amounts of information are gathered in order to find patterns and connections within the data, and this data can then be used by AI. Big data is used in marketing to personalize suggestions in online shopping or in cars' GPS systems to provide better routes for its drivers."
+  },
+  "ml": {
+    "how": "how it works",
+    "prev": "back",
+    "next": "next",
+    "finish": "finish",
+    "steps": [
+      {
         "title": "Machine Learning",
-        "desc": "Machine learning is a technique in which you show a program what is and is not what it wants to identify. Based on that data, it will begin to make its own assumptions on what “is” and “is not.”"
-    },
-    "next": "up next: metaverse"
+        "desc": "Machine learning is a type of AI that uses data to identify patterns and use that information to optimize its thinking process in order to achieve a set goal (for example, achieving 100% accuracy at classifying different road signs). Machine learning uses math to make its predictions, but in the following example we'll only explain it at a high-level."
+      },
+      {
+        "title": "collecting data",
+        "desc": "Let's say we want to teach a computer to recognize the difference between cats and dogs. First, we have to gather lots of data. We can collect different pictures and define different features like tail length, snout length, and pupil roundness. We'll look at different species of cats and dogs, collect data from the images, and label each image as \"cat\" or \"dog.\""
+      },
+      {
+        "title": "preparing data",
+        "desc": "Next we have to split data into two categories: training data and testing data. Training data is used to create our model — in our example, we will use it to teach a computer if the image it's viewing is \"cat\" or \"dog.\" Testing data is used to evaluate our model and see how accurate it is. Data is split like this so the computer cannot 'memorize' the answers — much like how a teacher wouldn't use the same exact questions from a practice test on the real exam."
+      },
+      {
+        "title": "choosing a model",
+        "desc": "Then we choose a model to teach the data to. There are many different types of models that work for different types of data. In this example, we'll guide you through a general model that uses 'supervised learning.'"
+      },
+      {
+        "title": "training",
+        "desc": "Now, we teach the model. We'll show an image and explicitly tell the model its label. For instance, we'll show a cat image and tell the model that it is, in fact, a cat. As we show the model more pictures, it can learn patterns to define the two animals — that cats have very narrow pupils and a short snout, while dogs have long snouts and short tails. The more data it is shown, the better it can identify the animals."
+      },
+      {
+        "title": "testing",
+        "desc": "Then we check if the model is performing well. The model will apply the patterns it learned from training and apply it to the unseen testing data. In our example, let's say we show the model new images of cats and dogs. It will make its own predictions on whether it is looking at a cat or a dog. How many it can identify correctly will define the model's 'accuracy.'"
+      },
+      {
+        "title": "tuning",
+        "desc": "We can repeat the process to teach the model more features and different species to improve the model and make better predictions. You can also expand the model to include more animals, or learn whether the image it's looking at is even an animal at all. These kinds of problems require more complex models."
+      }
+    ]
+  },
+  "next": "up next: metaverse"
 }

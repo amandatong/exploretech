@@ -19,28 +19,24 @@
         // background-position:0 calc(-400px + 1vw);
         position:relative;
         width:100vw;
-        height:170vmin;
+        min-height:170vmin;
         display:flex;
         justify-content: flex-end;
-        align-items: center;
         z-index:1;
                 
-        @media screen and (max-width:$md) { background-position:0 -480px;padding-top:20rem;height:100vh; }
+        @media screen and (max-width:$md) { flex-direction:column;justify-content:flex-start;background-position:0 -480px;min-height:100vh; }
         @media screen and (max-width:$sm) { background-size:100% auto;background-position:0 -310px;}
         
         .intro-right {
-            padding-right:5rem;
-            // margin-top:34vmin;
+            padding-right:10rem;
             width:55vw;
             height:100vh;
-            display:flex;flex-direction: column;align-items: center;
+            display:flex;flex-direction: column;align-items: center;justify-content:center;
             @media screen and (max-width:$md) {
+                // justify-content:flex-start;
+                min-height:100vh;
                 width:100vw;
-                padding:0 5rem;
-            }
-
-            .intro-wrap {
-                height:20vw;
+                padding:5rem 1rem;
             }
 
             .page-title {
@@ -75,9 +71,14 @@
             .section-title {align-self:flex-start}
             .desc { margin-top:1.5rem;}
 
+            .button-wrap {display:flex;}
+
+
             .ex-button { 
+                flex:1;
+                margin: 0 1rem;
                 display:flex;align-items: center;justify-content: center;
-                margin-top:1rem;
+                margin-top:1.5rem;
                 font-size:$subtitle;font-weight:600;text-transform:uppercase;
                 background:linear-gradient($teal, $cyan);
                 z-index:999999999999;
@@ -87,6 +88,7 @@
                 padding:1rem 2rem;
                 line-height:1;
                 cursor:pointer;
+
                 svg { width:2rem;margin-left:1rem;}
                 &:hover { background:linear-gradient($cyan, $blue)}
             }
@@ -94,10 +96,25 @@
 
         @media screen and (max-width:$md) { margin-top:0;flex-direction:column-reverse; }
 
-        .sticky {
-            position:fixed !important;
-            top:16vw;
-            right:5vw;
+        // .sticky {
+        //     position:fixed !important;
+        //     top:16vw;
+        //     right:5vw;
+        // }
+
+        .show {
+            visibility: visible;
+            position: static;
+            z-index: 99999999;
+            opacity:1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .hide {
+            visibility: hidden;
+            position:absolute;
+            opacity:0;
+            transition: all 0.5s ease-in-out;
         }
 
         .ml_cards {
@@ -152,7 +169,7 @@
         }
     }
 
-    .machine-learning {
+    .application {
         height:100vh;
     }
 
