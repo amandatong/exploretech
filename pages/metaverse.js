@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import Mountains from '../public/assets/metaverse/mountains.svg';
 import Waves from '../public/assets/metaverse/waves.svg';
+import Waves2 from '../public/assets/metaverse/waves2.svg';
 import Coin1 from '../public/assets/metaverse/coin_1.svg';
 import Coin2 from '../public/assets/metaverse/coin_2.svg';
 import Coin3 from '../public/assets/metaverse/coin_3.svg';
@@ -151,7 +152,12 @@ export default function Metaverse() {
             </div>
         </div>
         <div id="manufacturing" className="section">
-            role in manufacturing
+            <div className="section-title">{t('role.title')}</div>
+            <div className="desc">{t('role.desc')}</div>
+            <Waves2 className="waves-graphic"/>
+        </div>
+        <div id="enter_metaverse" className="section">
+            <div className="section-title">enter the metaverse</div>
         </div>
         
         <Link href="/digital-twin" passHref>

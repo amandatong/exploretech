@@ -40,5 +40,9 @@
       }
     ]
   },
+  "role": {
+    "title": "role at HMGICS",
+    "desc": "AI is used to help smart factory robots make intelligent decisions and automatically guide car parts to the correct location, find inventory space, or have finished products self-park. Big data is used to gather information for simulations and find efficient logistics operations. Computer vision, a subfield of AI, is used to recognize and sort car parts, find and unpack boxes, or to identify imperfections during quality inspection of areas like lamp brightness or alignment of car doors."
+  },
   "next": "up next: metaverse"
 }

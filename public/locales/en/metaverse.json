@@ -24,5 +24,9 @@
         "desc": "Ownership is the idea that you own some sort of digital asset within the metaverse, that is not tied to physicality. Popular kinds of ownership often mentioned are cryptocurrency and NFTs, both of which rely on blockchain technology. These assets are meant to be carried from one virtual world to the next.",
         "blockchain": "What is blockchain?"
     },
+    "role" : {
+        "title": "Role at HMGICS",
+        "desc": "The metaverse is used to visualize the smart factory in 3D and monitor the status of car production remotely, no longer requiring physical visits from factory managers. It will also serve as a system for customers to trial car features digitally without having to wait for installment in physical vehicles. The metaverse will also be able to synchronize with real-time data and inform digital twin simulations, which will be discussed in more detail in the next section."
+    },
     "next": "Up Next: Digital Twin"
 }

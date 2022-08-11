@@ -86,7 +86,7 @@
     position:fixed;
     top:1rem;
     left:calc(50% - 70px);
-    z-index:9;
+    z-index:9999999999;
 
     svg {
         width:calc(($body + 4px) * 1.15);

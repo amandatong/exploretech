@@ -243,6 +243,29 @@
             } 
         }
     }
+
+    #manufacturing {
+        position:relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        .section-title {
+            position:absolute;
+            left:-50px;
+            bottom:300px;
+            transform:rotate(-90deg);
+        }
+        .desc {
+            padding:0 12rem;
+            width:90%;
+        }
+        .waves-graphic {
+            position:absolute;
+            left:0;
+            top:0;
+        }
+    }
     
     .reveal_next { 
         background-color:$cyan;
