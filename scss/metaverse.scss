@@ -201,12 +201,12 @@
     #coins-divider {
         margin:0 5rem;
         flex: 0 0 50vmin;position:relative;height:100vh;
-        svg, div { position:absolute; }
-        #coin1 { width:30vmin;height:30vmin;bottom:0; background-image:url('/assets/metaverse/coin_1.svg');background-size:cover;}
-        #coin2 { width:42vmin;height:40vmin;bottom: 30vh; left:10vmin;background-image:url('/assets/metaverse/coin_2.svg');background-size:cover;}
-        #coin3 { width:15vmin;height:8vmin;top: 40vh; left: 2vw;background-image:url('/assets/metaverse/coin_3.svg');background-size:cover;}
-        #coin4 { width:25vmin;height:35vmin;top:0;left:0;background-image:url('/assets/metaverse/coin_4.svg');background-size:cover;}
-        #coin5 { width:20vmin;height:20vmin;bottom: 32vh; left: -8.5vw;background-image:url('/assets/metaverse/coin_5.svg');background-size:cover;}
+        svg, div { position:absolute;background-size:cover; }
+        #coin1 { width:30vmin;height:30vmin;bottom:0; }
+        #coin2 { width:42vmin;height:40vmin;bottom: 30vh; left:10vmin;}
+        #coin3 { width:15vmin;height:8vmin;top: 40vh; left: 2vw;}
+        #coin4 { width:25vmin;height:35vmin;top:0;left:0;}
+        #coin5 { width:20vmin;height:20vmin;bottom: 32vh; left: -8.5vw;}
     }
 
     #ownership {
@@ -229,17 +229,65 @@
             background-size:82vh auto;
             background-repeat:no-repeat;
             user-select:none;
-            .text { 
+            
+            .show {
+                display:initial;
+                visibility: visible;
+                position: static;
+                z-index: 99999999;
+                opacity:1;
+                transition: all 0.5s ease-in-out;
+            }
+    
+            .hide {
+                display:none;
+                visibility: hidden;
+                position:absolute;
+                opacity:0;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .text2 {
                 width:420px;
+                position:relative;
+                font-size:calc($body - 2px);
+                transition: all 1 ease-in-out;
+
+                .closer {
+                    position:absolute;
+                    right:-40px;
+                    top:-30px;
+                    cursor:pointer;
+                }
+            }
+
+            .text { 
+                width:440px;
+                line-height:1.1;
                 text-align:center;
                 background: -webkit-linear-gradient($cyan, $blue);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-weight:600;
-                font-size:$subsection;
+                font-size:$button;
                 text-transform:uppercase;
                 cursor:pointer;
+                transition: all 1 ease-in-out;
+                -webkit-animation: glow 1s ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glow 1s ease-in-out infinite alternate;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+
+                &:hover {
+                    transition: all 1s ease-in-out;
+                    text-shadow: 0 0 60px rgba($blue, 0.3);
+                    animation-play-state: paused;
+                }
             } 
         }
     }
@@ -264,6 +312,17 @@
             position:absolute;
             left:0;
             top:0;
+        }
+        .icons-wrap {
+            position:absolute;
+            bottom:150px;
+            left:0;
+            display:flex;
+            justify-content: space-evenly;
+            width:100%;
+            svg {
+                transform:scale(1.5);
+            }
         }
     }
     
@@ -302,3 +361,12 @@
 }
 
 .modal-close{width:1.5em; cursor:pointer;padding-top:1rem;}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 0px transparent, 0 0 10px rgba($teal, 0.2), 0 0 20px rgba($cyan, 0.2), 0 0 30px rgba($blue, 0.2), 0 0 40px rgba($blue, 0.2), 0 0 50px rgba($blue, 0.2);
+    }
+    to {
+      text-shadow: 0 0 0px transparent, 0 0 20px rgba($teal, 0.2), 0 0 30px rgba($cyan, 0.2), 0 0 40px rgba($cyan, 0.2), 0 0 50px $blue, 0 0 60px rgba($blue, 0.2);
+    }
+}

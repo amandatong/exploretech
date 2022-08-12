@@ -13,10 +13,9 @@
     }
 
     .ai_intro {
-        background:url("/assets/ai/neural_net.svg") no-repeat;
+        background-repeat:no-repeat;
         background-size:cover;
         background-position:bottom center;
-        // background-position:0 calc(-400px + 1vw);
         position:relative;
         width:100vw;
         min-height:170vmin;
@@ -101,12 +100,6 @@
 
         @media screen and (max-width:$md) { min-height:100vh;margin-top:5rem;flex-direction:column-reverse; }
 
-        // .sticky {
-        //     position:fixed !important;
-        //     top:16vw;
-        //     right:5vw;
-        // }
-
         .show {
             visibility: visible;
             position: static;
@@ -177,9 +170,22 @@
     }
 
     .application {
-        height:100vh;
+        height:80vh;
         padding:5rem;
+        display:flex;
+        align-items: flex-start;
+        .center-wrap {
+            display:flex;
+            align-items: center;
+
+            @media screen and (max-width:$md) { flex-direction:column;padding-bottom:30vmin;text-align:center;width:100%; }
+        }
         .desc { margin-top:1.5rem;}
+        .robot { 
+            margin-right:5rem; 
+            transform:scale(0.8);
+            @media screen and (max-width:$md) { margin:initial; }
+        }
     }
 
     .reveal_next { 

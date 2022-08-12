@@ -6,6 +6,15 @@ body {
     height:100%;
 }
 
+* {
+    -ms-overflow-style: none;
+    scrollbar-width:none;
+    // scroll-behavior:smooth;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
 .en { font-family:"poppins", sans-serif; }
 .ko { font-family:"SourceHanSansK", sans-serif; line-height:1.6;}
 

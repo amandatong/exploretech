@@ -1,4 +1,4 @@
 $light-text: black;
 $light-bg: white;
 
-#light { @include theme($light-text, $light-bg, "~antd/dist/antd"); }
+#light { @include theme($light-text, $light-bg, "~antd/dist/antd", "light"); }

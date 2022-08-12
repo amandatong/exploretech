@@ -1,24 +1,24 @@
 {
     "title": "Digital Twin",
     "desc": "A digital twin is a virtual representation of something in the real world. It is used primarily to identify and predict problems, as well as experiment with optimality without having to act in the physical world first.",
-    "iot" : {
-        "title": "Internet of Things",
-        "desc": "The Internet of Things (IoT) is the concept of connecting different devices in the physical world via the Internet to collect and share data between each other and gain a variety of information about the environment. Digital twins use IoT to inform its virtual simulation and create an accurate copy of the real world object it replicates.",
-        "input": {
-            "title": "Input",
-            "desc": "Different types of data are gathered from the physical world."
-        },
-        "connect" : {
-            "title": "Connect",
-            "desc": "The data is sent across an Internet network, using connections like Bluetooth, to be gathered with previous data. This data will inform the digital twin model so that it reflects the current state of its physical counterpart."
-        },
-        "analyze": {
-            "title": "Analyze",
-            "desc": "Using collected data, a model of the object is created. It can then be visualized, use AI to create predictions on potential problems or results, and respond to test variables manipulated by a user."
-        },
-        "output": "The information from digital twin simulations will inform the decisions made on its physical equivalent. As the physical world changes and updates, so too will the digital twin."
+    "iot": {
+      "title": "Internet of Things",
+      "desc": "The Internet of Things (IoT) is the concept of connecting different devices in the physical world via the Internet to collect and share data between each other and gain a variety of information about the environment. Digital twins use IoT to inform its virtual simulation and create an accurate copy of the real world object it replicates.",
+      "input": {
+        "title": "Input",
+        "desc": "Different types of data are gathered from the physical world."
+      },
+      "connect": {
+        "title": "Connect",
+        "desc": "The data is sent across an Internet network, using connections like Bluetooth, to be gathered with previous data. This data will inform the digital twin model so that it reflects the current state of its physical counterpart."
+      },
+      "analyze": {
+        "title": "Analyze",
+        "desc": "Using collected data, a model of the object is created. It can then be visualized, use AI to create predictions on potential problems or results, and respond to test variables manipulated by a user."
+      },
+      "output": "The information from digital twin simulations will inform the decisions made on its physical equivalent. As the physical world changes and updates, so too will the digital twin."
     },
-    "role": "Role in Manufacturing",
-    "role_desc" : "A digital twin can be used to simulate different logistics, modelling production of different models to determine the best way to manufacture a product. It can identify inefficiencies and cut costs.",
+    "role": "Role at HMGICS",
+    "role_desc": "The smart factory will have its own digital twin, that can be connected to data and the actions taken in the metaverse. Based on the gathered data, the digital twin will find the most efficient production operations and optimal logistics routes. Digital twins will also be used on a smaller scale to manage the flexible production of different models throughout HMGICS' cells.",
     "next": "What's next?"
-}
+  }

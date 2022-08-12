@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import TopicMenu from '../components/topic-menu';
 import { ArrowLeftIcon } from '@heroicons/react/outline';
 import { ArrowRightIcon } from '@heroicons/react/outline';
-import NeuralNet from '../public/assets/ai/neural_net.svg';
+import Robot from '../public/assets/ai/robot.svg';
 
 import dynamic from 'next/dynamic';
 const DynamicLordIcon = dynamic(() => import('../components/LordIcon'), {
@@ -123,10 +123,17 @@ export default function AI() {
                 </div>
             </div>
             <div className="application">
-                <div className="section-title">{t('role.title')}</div>
-                    <div className="desc">
-                        <p>{t('role.desc')}</p>
+                <div className="center-wrap">
+                    <div className="robot">
+                        <Robot/>
                     </div>
+                    <div className="info-wrap">
+                        <div className="section-title">{t('role.title')}</div>
+                        <div className="desc">
+                            <p>{t('role.desc')}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <Link href="/metaverse" passHref>
                 <div className={`reveal_next ${showBottom ? 'show' : 'hide'}`}>{t('next')} <ArrowRightIcon/></div>

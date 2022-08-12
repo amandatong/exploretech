@@ -8,7 +8,7 @@
     -webkit-text-stroke: 5px transparent;
 }
 
-@mixin theme($text, $bg, $src){
+@mixin theme($text, $bg, $src, $type){
     background-color:$bg;
     color:$text;
 
@@ -42,12 +42,29 @@
         background-color: rgba(gray, 0.3);
     }
 
-    #metaverse a { color: $text !important; }
+    #metaverse {
+        a { color: $text !important; }
+
+        $coin_url: "/assets/metaverse/#{$type}/coin_";
+        #coins-divider {
+            #coin1 { background-image:url('#{$coin_url}1.svg'); }
+            #coin2 { background-image:url('#{$coin_url}2.svg'); }
+            #coin3 { background-image:url('#{$coin_url}3.svg'); }
+            #coin4 { background-image:url('#{$coin_url}4.svg'); }
+            #coin5 { background-image:url('#{$coin_url}5.svg'); }
+        }
+    }
 
     #ai {
+        .ai_intro {
+            background-image:url("/assets/ai/neural_net_#{$type}.svg");
+        }
 
         .ml_cards .cards .card {
             background-color:$bg;
+        }
+        .robot svg{ 
+            rect, path, circle {fill:$bg}
         }
     }
     // @include meta.load-css($src);
