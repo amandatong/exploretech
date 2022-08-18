@@ -3,12 +3,14 @@ import AICube from '../public/assets/explore/ai.svg';
 import MetaverseCube from '../public/assets/explore/metaverse.svg';
 import DTCube from '../public/assets/explore/dt.svg';
 import { useTranslation } from 'next-i18next';
+import CubeFloat from '../components/cube-float';
 
 export default function Explore() {
     const { t, i18n } = useTranslation('common', { keyPrefix: 'explore' });
 
     return (
       <main id="explore">
+        <CubeFloat number={50} bigger={true}/>
         <div className="explore-wrap">
           <div className="page-title">{t('title')}</div>
 

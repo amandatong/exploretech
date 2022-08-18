@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import withDarkMode, { useDarkMode, MODE } from 'next-dark-mode';
 
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps, router }) {
 
   return (
     <>
@@ -28,7 +28,7 @@ function App({ Component, pageProps }) {
       </Script>
         
       </Head>
-        <Layout>
+        <Layout router={router}>
           <Component {...pageProps} />
         </Layout>
     </>

@@ -1,16 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import { motion } from "framer-motion";
+import CubeFloat from '../components/cube-float';
 
 export default function Home() {
   const { t, i18n } = useTranslation('common', { keyPrefix: 'home' });
 
   return (
-    <main id="home" >
+    <main id="home">
+      <CubeFloat/>
       <div className="container">
         <div className="hero">
-          <div className="title">{t('title')}</div>
-          <div className="subtitle">{t('subtitle')}</div>
+          <motion.div exit={{opacity:0}} className="title">{t('title')}</motion.div>
+          <motion.div exit={{opacity:0}} className="subtitle">{t('subtitle')}</motion.div>
           <Link href="/explore"><div className="button">{t('button')}</div></Link>
         </div>
       </div>
@@ -18,7 +21,7 @@ export default function Home() {
   )
 }
 
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export const getStaticProps = async ({ locale }) => ({
   props: {

@@ -111,7 +111,7 @@ export default function Metaverse() {
                             </div>
                         </motion.div>
                         
-                        <Modal centered visible={isModalVisible === key} onCancel={() => setIsModalVisible('')} footer={null} closeIcon={<div className="modal-close"><XIcon/></div>}>
+                        <Modal key={key} centered visible={isModalVisible === key} onCancel={() => setIsModalVisible('')} footer={null} closeIcon={<div className="modal-close"><XIcon/></div>}>
                             <div className="modal-wrap">
                                 <div className="xr_modal_left">
                                     <img src={`/assets/metaverse/${key}.svg`} id={`${key}_img`}/>
