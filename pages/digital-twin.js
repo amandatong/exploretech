@@ -22,6 +22,8 @@ export default function DigitalTwin() {
     const [blobIndex, setBlobIndex] = useState(1);
     const [showBottom, setShowBottom] = useState(false);
     const timeoutRef = useRef(null);
+    
+    const [blobColor, setBlobColor] = useState("blue");
 
     const showBottomNav = () => {
         setShowBottom(true);
@@ -56,6 +58,10 @@ export default function DigitalTwin() {
             new_blob = 1
         }
         setBlobIndex(new_blob)
+    }
+
+    function changeColor(color) {
+        setBlobColor(color);
     }
 
     // useEffect(() => {
@@ -163,11 +169,18 @@ export default function DigitalTwin() {
                         <img className="blob" src={`/assets/digital-twin/blob_${blobIndex}.svg`}/>
                     </div> */}
                     <div className="digital">
-                        <img className="blob" src={`/assets/digital-twin/blob_1.svg`}/>
+                        <img className="blob" src={`/assets/digital-twin/blob_1_${blobColor}.svg`}/>
                     </div>
                     <div className="desc">
                         <div className="subsection-title">{t('iot.analyze.title')}</div>
                         <div className="subsection-desc">{t('iot.analyze.desc')}</div>
+                    </div>
+                    <div className="color-select">
+                        {['red', 'orange', 'yellow', 'green', 'blue', 'purple'].map(color => {
+                            return(
+                                <div id={color} className={`color-option`} onClick={() => changeColor(color)}/>
+                            )
+                        })}
                     </div>
                 </div>
                 <img src="/assets/digital-twin/analyze_line.svg" className="input-lines connect"/>

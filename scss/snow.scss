@@ -6,6 +6,7 @@
 
 .snow-contain {
   position:absolute;top:0;
+  z-index:-1
 }
   
   .snowcube {
@@ -33,6 +34,10 @@
       $random-scale: random(10000) * 0.0001;
       $fall-duration: random_range(20, 40) * 1s;
       $fall-delay: random(30) * -1s;
+
+      &.bigger {
+        $random-scale: min(random(10000) * 0.0001 + 0.3, 1);
+      }
   
       &:nth-child(#{$i}) {
         opacity: random(10000) * 0.0001 - 0.3;
