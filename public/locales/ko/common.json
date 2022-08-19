@@ -19,15 +19,16 @@
         "about":"프로젝트에 대해"
     },
     "home": {
-        "title": "새로운 기술을 탐험합시다",
-        "subtitle": "인더스트리 4.0 방향에 대해 배웁니다",
+        "title": "HMGICS에서 사용되는 새로운 기술",
+        "subtitle": "HMGICS가 인더스트리 4.0에 어떻게 참여하는지 살펴봅시다.",
         "button": "들어가기"
     },
     "explore": {
         "title": "탐험",
         "ai": "AI 및 빅 데이터",
         "metaverse": "메타버스",
-        "digital-twin": "디지털 트윈"
+        "digital-twin": "디지털 트윈",
+        "about": "HMGICS 소개"
     },
     "about": {
         "title": "프로젝트의 정보",

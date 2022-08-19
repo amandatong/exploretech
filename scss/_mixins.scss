@@ -67,5 +67,21 @@
             rect, path, circle {fill:$bg}
         }
     }
+
+    #digital-twin {
+        .active {
+            border:2px solid $text;
+        }
+
+        // .stat-block {
+        //     border:1px solid $text;
+        // }
+    }
+
+    #about {
+        .about-wrap {
+            background-color:rgba($bg, 0.7);
+        }
+    }
     // @include meta.load-css($src);
 }

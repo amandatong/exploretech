@@ -15,13 +15,23 @@
         align-items: center;
         flex-direction: column;
 
+        @media screen and (max-width:$md){
+            width:100vw;
+        }
+
 
         .title {
+            width:60vw;
             font-size:$title;
             line-height:1.1;
             font-weight:700;
             text-transform:uppercase;
             z-index:111;
+
+            @media screen and (max-width:$md){
+                width:100vw;
+                font-size:calc($title - 5vmin);
+            }
         }
 
         .subtitle {
@@ -30,6 +40,10 @@
             margin-bottom:2rem;
             font-style:italic;
             z-index:111;
+
+            @media screen and (max-width:$md){
+                font-size:calc($subtitle - 1vmin);
+            }
         }
 
         .button {

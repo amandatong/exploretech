@@ -47,7 +47,7 @@ export default function AI() {
 
     for (let index = 0;index < ML_STEPS;index++){
         ml_cards.push(
-            <div className={index === MLIndex ? 'show' : 'hide'}>
+            <div key={index} className={index === MLIndex ? 'show' : 'hide'}>
                 <div className="section-title">{index !== 0 && `${index}.`} {t(`ml.steps.${index}.title`)}</div>
                 <div className="desc">
                     <p>{t(`ml.steps.${index}.desc`)}</p>

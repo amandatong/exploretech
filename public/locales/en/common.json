@@ -19,15 +19,16 @@
         "about":"about the project"
     },
     "home": {
-        "title": "Explore new technologies",
-        "subtitle": "Learn about the direction of Industry 4.0",
+        "title": "The Technology Behind HMGICS",
+        "subtitle": "Glimpse how HMGICS is participating in Industry 4.0",
         "button": "Enter"
     },
     "explore": {
         "title": "explore",
         "ai": "AI & Big Data",
         "metaverse": "Metaverse",
-        "digital-twin": "Digital Twin"
+        "digital-twin": "Digital Twin",
+        "about": "About HMGICS"
     },
     "about": {
         "title": "about the project",

@@ -68,7 +68,7 @@ a {
 }
 
 /*antdesign overrides*/
-.ant-tooltip-placement-bottomLeft, .ant-tooltip-placement-bottomRight {
+.ant-tooltip-placement-bottomLeft, .ant-tooltip-placement-bottomRight, .ant-tooltip-placement-bottom {
     padding-top: 0px !important;
     z-index: 1000 !important;
     
@@ -86,6 +86,10 @@ a {
         padding:6px 12px !important;
         border-radius:100px !important;
     }
+}
+
+.ant-tooltip-placement-bottom {
+    padding-top: 15px !important;
 }
 
 .ant-modal {

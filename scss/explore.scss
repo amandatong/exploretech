@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     .page-title {
-        margin-top:-7rem;
+        // margin-top:-7rem;
         margin-bottom:2rem;
     }
     .links-wrap {
@@ -45,4 +45,39 @@
             }
         }
     }
+
+    .about-button{
+        background-color:$cyan;
+        width:20vw;
+        min-width:200px;
+        padding:0.7rem 2rem;
+        padding-top:1rem;
+        border-radius:25px;
+        text-transform:uppercase;
+        font-weight:600;
+        font-size:calc($subtitle - 2px);
+        text-align:center;
+        cursor:pointer;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        line-height:1;
+
+        svg { width: 2rem;margin-bottom:0.5rem;margin-right:0.7rem; }
+
+        &:hover { background-color:$blue}
+
+        &-wrap {
+            display:flex;
+            justify-content: center;
+            width:100vw;
+            margin-top:4rem;
+        }
+    }
+
+}
+
+.ko #explore .about-button {
+    padding-top:0.7rem;line-height:initial;
+    svg { margin-bottom:initial; }
 }

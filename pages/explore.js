@@ -4,6 +4,7 @@ import MetaverseCube from '../public/assets/explore/metaverse.svg';
 import DTCube from '../public/assets/explore/dt.svg';
 import { useTranslation } from 'next-i18next';
 import CubeFloat from '../components/cube-float';
+import { InformationCircleIcon } from '@heroicons/react/outline';
 
 export default function Explore() {
     const { t, i18n } = useTranslation('common', { keyPrefix: 'explore' });
@@ -25,6 +26,10 @@ export default function Explore() {
               </Link>
             )
             })}
+          </div>
+
+          <div className="about-button-wrap">
+          <Link href="/about"><div className="about-button"><InformationCircleIcon/> {t('about')}</div></Link>
           </div>
         </div>
       </main>

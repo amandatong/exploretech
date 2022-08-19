@@ -1,0 +1,43 @@
+#about {
+    background-image:url('/assets/about/background.svg');
+    background-size:cover;
+    background-position:center center;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    // align-items: center;
+
+    .about-wrap {
+        width:100vw;
+        height:100vh;
+        border-radius:20px;
+        display:flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        padding:5rem;
+
+        .page-title {
+            margin-bottom:-0.5rem;
+        }
+
+        .subtitle {
+            font-size:$subtitle;
+            font-weight:600;
+            font-style:italic;
+        }
+
+        .desc { 
+            margin-top:5rem;
+            width:60vw;
+            text-align: justify;
+        }
+    }
+
+    .bottom-wave {
+        position:absolute;
+        bottom:0;
+        width:100vw;
+    }
+}

@@ -8,6 +8,7 @@ import { ArrowRightIcon } from '@heroicons/react/outline';
 import Blob from '../public/assets/digital-twin/blob_1.svg';
 
 import dynamic from 'next/dynamic';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 const DynamicLordIcon = dynamic(() => import('../components/LordIcon'), {
     ssr: false
 });
@@ -23,7 +24,7 @@ export default function DigitalTwin() {
     const [showBottom, setShowBottom] = useState(false);
     const timeoutRef = useRef(null);
     
-    const [blobColor, setBlobColor] = useState("blue");
+    const [blobColor, setBlobColor] = useState("cyan");
 
     const showBottomNav = () => {
         setShowBottom(true);
@@ -64,6 +65,35 @@ export default function DigitalTwin() {
         setBlobColor(color);
     }
 
+    const color_variants = {
+        red: { width: "55%"},
+        red2: { width: "35%"},
+        orange: { width: "15%"},
+        orange2: { width: "85%"},
+        yellow: { width: "25%"},
+        yellow2: { width: "95%"},
+        green: { width: "40%"},
+        green2: { width: "5%"},
+        cyan: { width: "62%"},
+        cyan2: { width: "54%"},
+        blue: { width: "90%"},
+        blue2: { width: "40%"},
+        purple: { width: "33%"},
+        purple2: { width: "81%"},
+    }
+    // const x = useMotionValue(200);
+    // const y = useMotionValue(200);
+
+    // const rotateX = useTransform(x, [0, 400], [25, -25]);
+    // const rotateY = useTransform(y, [0, 400], [25, -25]);
+
+    // function handleMouse(event) {
+    //     const rect = event.currentTarget.getBoundingClientRect();
+
+    //     x.set(event.clientX - rect.left);
+    //     y.set(event.clientY - rect.top);
+    // }
+
     // useEffect(() => {
     //     resetTimeout();
     //     timeoutRef.current = setTimeout(
@@ -80,67 +110,98 @@ export default function DigitalTwin() {
     //   }, [connectIndex]);
 
     const intro_info = <><div className="page-title">{t('title')}</div><div className="desc">{t('desc')}</div></>;
+    const fadeVariants = {
+        fadeIn: i => ({
+            opacity:1,
+            transition: {
+                delay: i * 0.1,
+                duration: 0.7
+            }
+        }),
+        hidden: { 
+            opacity: 0,
+            transition: {
+              when: "afterChildren"
+            }
+        },
+        show: {
+          opacity: 1,
+          transition: {
+            when: "beforeChildren",
+            staggerChildren: 0.3
+          }
+        },
+        itemShow: { opacity: 1}
+    }
+    
+    const item = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 }
+      }
 
     return(
         <>
         <TopicMenu active="2"/>
         <main id="digital-twin" onScroll={handleScroll}>
             <div style={{display:'none'}}><DynamicLordIcon /></div>
-            <div className="dt_intro">
-                <div className="dt_intro-text desktop">
+            <motion.div className="dt_intro" initial={{opacity:0}} animate={{opacity:1, transition: {duration:0.7}}}>
+                <motion.div className="dt_intro-text desktop" initial={{x:-50}} whileInView={{x:0, transition: {duration:0.7}}}>
                     {intro_info}
-                </div>
+                </motion.div>
                 <div className="blobs">
-                    <div className="physical blob-contain">
-                        <Blob className="blob"/>
-                    </div>
+                    <motion.div className="physical blob-contain" initial={{y:50}} whileInView={{y:0, transition: {duration:0.7}}}>
+                        <motion.div initial={{y:-50}} whileInView={{y:0, transition: {duration:1}}}><Blob className="blob"/></motion.div>
+                    </motion.div>
                     <div className="dt_intro-text mobile">
                         {intro_info}
                     </div>
-                    <div className="digital blob-contain">
-                        <Blob className="blob"/>
+                    <div className="digital blob-contain" initial={{y:-50}} whileInView={{y:0, transition: {duration:0.7}}}>
+                        <motion.div initial={{y:50}} whileInView={{y:0, transition: {duration:1}}}><Blob className="blob"/></motion.div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className="iot">
-                <div className="section-title">{t('iot.title')}</div>
-                <div className="iot-desc">{t('iot.desc')}</div>
-                <div className="physical">
+                <motion.div className="section-title" initial="hidden" custom={3} whileInView="fadeIn" variants={fadeVariants}>{t('iot.title')}</motion.div>
+                <motion.div className="iot-desc"  initial="hidden" custom={5} whileInView="fadeIn" variants={fadeVariants}>{t('iot.desc')}</motion.div>
+                <motion.div className="physical"  initial="hidden" custom={7} whileInView="fadeIn" variants={fadeVariants}>
                     <img className="blob" src="/assets/digital-twin/blob_1.svg"/>
-                </div>
-                <img src="/assets/digital-twin/input_lines_top.svg" className="input-lines"/>
+                </motion.div>
+                <LinesTop/>
+                {/* <motion.img src="/assets/digital-twin/input_lines_top.svg" className="input-lines"
+                    initial="hidden" custom={5} whileInView="fadeIn" variants={fadeVariants}/> */}
                 <div className="inputs">
                     <div className="input desc mobile">
                         <div className="subsection-title">{t('iot.input.title')}</div>
                         <div className="subsection-desc">{t('iot.input.desc')}</div>
                     </div>
-                    <div className="inputs-wrap">
-                        <div className="input">
+                    <motion.div className="inputs-wrap" initial="hidden" whileInView="show" variants={fadeVariants}>
+                        <motion.div className="input" variants={item}>
                             <lord-icon trigger="morph" src="/assets/lotties/bar_chart.json" style={icons_width}></lord-icon>
                             {/* monitor energy, temperature, pressure levels in real time*/}
-                        </div>
-                        <div className="input">
+                        </motion.div>
+                        <motion.div className="input" variants={item}>
                             <lord-icon trigger="morph" src="/assets/lotties/location.json" style={icons_width}></lord-icon>
                             {/* track location of products as it moves through the factory */}
-                        </div>
-                        <div className="input desc desktop">
+                        </motion.div>
+                        <motion.div className="input desc desktop" variants={item}>
                             <div className="subsection-title">{t('iot.input.title')}</div>
                             <div className="subsection-desc">{t('iot.input.desc')}</div>
-                        </div>
-                        <div className="input">
+                        </motion.div>
+                        <motion.div className="input" variants={item}>
                             <lord-icon trigger="morph" src="/assets/lotties/film.json" style={icons_width}></lord-icon>
                             {/* use computer vision to inform the status and efficiency of the system, or track output quantity */}
-                        </div>
-                        <div className="input">
+                        </motion.div>
+                        <motion.div className="input" variants={item}>
                             <lord-icon trigger="morph" src="/assets/lotties/tool.json" style={icons_width}></lord-icon>
                             {/* detect errors and bugs in a system's operations so the DT can find how to fix it */}
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
-                <img src="/assets/digital-twin/input_lines_bottom.svg" className="input-lines bottom"/>
+                {/* <img src="/assets/digital-twin/input_lines_bottom.svg" className="input-lines bottom"/> */}
+                <LinesBottom/>
                 <div className="connect">
-                    <div className="connect-wrap">
-                        <div className="connect-icon">
+                    <motion.div className="connect-wrap" initial="hidden" whileInView="show" variants={fadeVariants} transition={{delay:0.6}}>
+                        <motion.div className="connect-icon" variants={item}>
                             <lord-icon trigger="loop" speed="0.3" src="/assets/lotties/wireless.json" style={icons_width}/>
                             {/* <lord-icon trigger="loop"
                                 key={connectIndex}
@@ -148,39 +209,56 @@ export default function DigitalTwin() {
                                 speed="0.5"
                                 style={icons_width}
                             /> */}
-                        </div>
-                        <div className="desc desktop">
+                        </motion.div>
+                        <motion.div className="desc desktop" variants={item}>
                             <div className="subsection-title">{t('iot.connect.title')}</div>
                             <div className="subsection-desc">{t('iot.connect.desc')}</div>
-                        </div>
-                        <div className="connect-icon">
+                        </motion.div>
+                        <motion.div className="connect-icon" variants={item}>
                             {/* <lord-icon trigger="loop" speed="0.3" src="/assets/lotties/cloud.json" style={icons_width}/> */}
                             <lord-icon trigger="loop" speed="0.3" src="/assets/lotties/server.json" style={icons_width}/>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                     <div className="desc mobile">
                         <div className="subsection-title">{t('iot.connect.title')}</div>
                         <div className="subsection-desc">{t('iot.connect.desc')}</div>
                     </div>
                 </div>
-                <img src="/assets/digital-twin/connect_line.svg" className="input-lines connect"/>
+                {/* <img src="/assets/digital-twin/connect_line.svg" className="input-lines connect"/> */}
+                <ConnectLine/> 
                 <div className="analyze">
                     {/* <div onClick={() => changeBlob()} className="digital">
                         <img className="blob" src={`/assets/digital-twin/blob_${blobIndex}.svg`}/>
                     </div> */}
-                    <div className="digital">
-                        <img className="blob" src={`/assets/digital-twin/blob_1_${blobColor}.svg`}/>
+                    <motion.div className="digital" 
+                        // onMouseMove={handleMouse} style={{perspective:400}}
+                    >
+                        <motion.img className="blob" src={`/assets/digital-twin/blob_1_${blobColor}.svg`} 
+                                    animate={{y:10, transition:{from: -10, repeat: Infinity, repeatType: "mirror", duration: 1.5}}}
+                                    // style={{translateX: rotateX, translateY: rotateY}}
+                                    drag dragConstraints={{left:-10,right:10,top:-10,bottom:10}} dragElastic={0.1} dragSnapToOrigin={true}
+                                    whileTap={{ scale: 0.8 }}
+                        />
+                        <div className="faux-stats">
+                            <div className="stat-block">
+                                <motion.div className={`${blobColor} progress`} animate={blobColor} variants={color_variants} transition={{duration:0.7}}/>
+                            </div>
+                            <div className="stat-block">
+                                <motion.div className={`${blobColor} progress`} animate={`${blobColor}2`} variants={color_variants} transition={{duration:0.7}}/>
+                            </div>
+                        </div>
+                    </motion.div>
+                    <div className="color-select">
+                        {['red', 'orange', 'yellow', 'green', 'cyan','blue', 'purple'].map(color => {
+                            return(
+                                <motion.div className={`color-option ${color} ${color == blobColor ? 'active' : null}`} onClick={() => changeColor(color)}
+                                />
+                            )
+                        })}
                     </div>
                     <div className="desc">
                         <div className="subsection-title">{t('iot.analyze.title')}</div>
                         <div className="subsection-desc">{t('iot.analyze.desc')}</div>
-                    </div>
-                    <div className="color-select">
-                        {['red', 'orange', 'yellow', 'green', 'blue', 'purple'].map(color => {
-                            return(
-                                <div id={color} className={`color-option`} onClick={() => changeColor(color)}/>
-                            )
-                        })}
                     </div>
                 </div>
                 <img src="/assets/digital-twin/analyze_line.svg" className="input-lines connect"/>
@@ -193,7 +271,7 @@ export default function DigitalTwin() {
                             <img className="blob" src="/assets/digital-twin/blob_1.svg"/>
                         </div>
                         <div className="digital">
-                            <img className="blob" src={`/assets/digital-twin/blob_1.svg`}/>
+                            <img className="blob" src={`/assets/digital-twin/blob_1_${blobColor}.svg`}/>
                         </div>
                     </div>
                     <div className="desc">
@@ -212,8 +290,11 @@ export default function DigitalTwin() {
 }
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import LinesTop from '../components/lines-top';
+import LinesBottom from '../components/lines-bottom';
+import ConnectLine from '../components/connect-line';
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common','digital-twin']))
+    ...(await serverSideTranslations(locale, ['common','digital-twin','ai','metaverse']))
   }
 })

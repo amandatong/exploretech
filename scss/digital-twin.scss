@@ -248,6 +248,8 @@
         }
 
         .analyze {
+            .digital { position:relative;overflow:hidden; img { cursor: grab; &:active { cursor:grabbing} } }
+
             display:flex;
             flex-direction: column;
             align-items: center;
@@ -262,16 +264,44 @@
             }
 
             .color-select {
+                background-color: rgba(gray, 0.1);
+                display:flex;
+                align-items: center;
+                padding:1rem 2rem;
+                border-radius:25px;
                 .color-option {
                     border-radius:100%;
-                    width:30px;height:30px;cursor:pointer;display:inline-block;
+                    width:25px;height:25px;cursor:pointer;display:inline-block;
+                    margin:0 0.5rem;
+                    transition: all 1 ease-in-out;
+                }
+            }
                     
-                    &#red { background-color:red;}
-                    &#orange { background-color:orange;}
-                    &#yellow { background-color:yellow;}
-                    &#green { background-color:green;}
-                    &#blue { background-color:blue;}
-                    &#purple { background-color:purple;}
+            .red { background-color:#F05454;}
+            .orange { background-color:#FF9F29;}
+            .yellow { background-color:#FFE300;}
+            .green { background-color:#00FFAB;}
+            .cyan { background-color:#9ADCFF;}
+            .blue { background-color:#5800FF;}
+            .purple { background-color:#E15FED;}
+
+            .faux-stats {
+                position:absolute;
+                bottom:3rem;
+                left:2rem;
+                display:flex;
+                flex-direction: column-reverse;
+                .stat-block {
+                    width:140px;
+                    height:20px;
+                    border:1px solid $blue;
+                    overflow:hidden;
+                    border-radius:20px;
+                    margin-top:0.5rem;
+                    .progress {
+                        height:100%;
+                        width:30%;
+                    }
                 }
             }
         }

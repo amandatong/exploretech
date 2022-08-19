@@ -12,7 +12,7 @@ function App({ Component, pageProps, router }) {
   return (
     <>
       <Head>
-        <title>Explore New Technologies</title>
+        <title>HMGICS Technologies</title>
         <meta name="description" content="an exploration of new technologies" />
         <link rel="icon" href="/favicon.ico"/>
         
