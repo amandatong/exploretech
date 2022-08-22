@@ -16,7 +16,7 @@ function App({ Component, pageProps, router }) {
         <meta name="description" content="an exploration of new technologies" />
         <link rel="icon" href="/favicon.ico"/>
       </Head>
-      <Script>
+      <Script id="my-script">
         {`(function(d) {
             var config = {
               kitId: 'gnh3taq',
