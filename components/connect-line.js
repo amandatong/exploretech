@@ -19,8 +19,8 @@ export default function ConnectLine() {
             />
             <defs>
                 <linearGradient id="paint0_linear_57_707" x1="272.129" y1="157.081" x2="272.129" y2="-81.573" gradientUnits="userSpaceOnUse">
-                    <stop stopColor"#1DADCC"/>
-                    <stop offset="1" stopColor"#306ECB"/>
+                    <stop stopColor="#1DADCC"/>
+                    <stop offset="1" stopColor="#306ECB"/>
                 </linearGradient>
             </defs>
         </motion.svg>
