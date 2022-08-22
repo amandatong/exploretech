@@ -19,7 +19,7 @@ export default function NavMenu({onClose, visible}) {
       drawerStyle={{
         backgroundImage: `url("${isHovering ? `/assets/nav/${isHovering}.svg` : '/assets/nav/blank.svg'}")`
       }}>
-        <div class="menu-wrap">
+        <div className="menu-wrap">
           <div className="closeBar">
               <div id="close" onClick={onClose}><XIcon/></div>
           </div>
@@ -27,7 +27,7 @@ export default function NavMenu({onClose, visible}) {
             <div className="links">
               {['home', 'explore', 'future'].map((key) =>{
                 return(
-                  <div id={`${key}_drawer`} key={key} class="link" onMouseEnter={() => onMouseEnter(key)} onMouseLeave={onMouseLeave} onClick={onClose}><Link href={`/${key === 'home' ? '' : key}`}><a class={key}>{t(key)}</a></Link></div>
+                  <div id={`${key}_drawer`} key={key} className="link" onMouseEnter={() => onMouseEnter(key)} onMouseLeave={onMouseLeave} onClick={onClose}><Link href={`/${key === 'home' ? '' : key}`}><a className={key}>{t(key)}</a></Link></div>
                 )
               })}
             </div>

@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import TopicMenu from '../components/topic-menu';
+import LinesTop from '../components/lines-top';
+import LinesBottom from '../components/lines-bottom';
+import ConnectLine from '../components/connect-line';
 
 import { ArrowRightIcon } from '@heroicons/react/outline';
 import Blob from '../public/assets/digital-twin/blob_1.svg';
@@ -251,7 +254,7 @@ export default function DigitalTwin() {
                     <div className="color-select">
                         {['red', 'orange', 'yellow', 'green', 'cyan','blue', 'purple'].map(color => {
                             return(
-                                <motion.div className={`color-option ${color} ${color == blobColor ? 'active' : null}`} onClick={() => changeColor(color)}
+                                <motion.div key={color} className={`color-option ${color} ${color == blobColor ? 'active' : null}`} onClick={() => changeColor(color)}
                                 />
                             )
                         })}
@@ -290,9 +293,6 @@ export default function DigitalTwin() {
 }
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import LinesTop from '../components/lines-top';
-import LinesBottom from '../components/lines-bottom';
-import ConnectLine from '../components/connect-line';
 export const getStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common','digital-twin','ai','metaverse']))

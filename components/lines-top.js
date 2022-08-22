@@ -36,24 +36,24 @@ export default function LinesTop() {
             />
             <defs>
             <linearGradient id="paint0_linear_57_678" x1="299.5" y1="240.5" x2="303.5" y2="9.50001" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#14237D"/>
-            <stop offset="1" stop-color="#306ECB"/>
+            <stop stopColor="#14237D"/>
+            <stop offset="1" stopColor="#306ECB"/>
             </linearGradient>
             <linearGradient id="paint1_linear_57_678" x1="847" y1="270.5" x2="844.5" y2="-17.5" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#14237D"/>
-            <stop offset="1" stop-color="#306ECB"/>
+            <stop stopColor="#14237D"/>
+            <stop offset="1" stopColor="#306ECB"/>
             </linearGradient>
             <linearGradient id="paint2_linear_57_678" x1="592.5" y1="223.5" x2="596.5" y2="37.5" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#14237D"/>
-            <stop offset="1" stop-color="#306ECB"/>
+            <stop stopColor="#14237D"/>
+            <stop offset="1" stopColor="#306ECB"/>
             </linearGradient>
             <linearGradient id="paint3_linear_57_678" x1="553" y1="223.5" x2="549" y2="37.5" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#14237D"/>
-            <stop offset="1" stop-color="#306ECB"/>
+            <stop stopColor="#14237D"/>
+            <stop offset="1" stopColor="#306ECB"/>
             </linearGradient>
             <linearGradient id="paint4_linear_57_678" x1="842" y1="235" x2="844.5" y2="36.5" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#14237D"/>
-            <stop offset="1" stop-color="#306ECB"/>
+            <stop stopColor="#14237D"/>
+            <stop offset="1" stopColor="#306ECB"/>
             </linearGradient>
             </defs>
 
@@ -71,24 +71,24 @@ export default function LinesTop() {
                 variants={variants} initial="hidden" animate={isInView ? 'shown' : 'hidden'} style={{pathLength: pathLength, opacity: opacity}} transition={{duration:0.7}}/>
             <defs>
                 <linearGradient id="paint0_linear_57_678" x1="132.371" y1="16.9199" x2="132.371" y2="255.574" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#306ECB"/>
-                    <stop offset="1" stop-color="#14237D"/>
+                    <stop stopColor="#306ECB"/>
+                    <stop offset="1" stopColor="#14237D"/>
                 </linearGradient>
                 <linearGradient id="paint1_linear_57_678" x1="1012.63" y1="16.9199" x2="1012.63" y2="255.574" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#306ECB"/>
-                    <stop offset="1" stop-color="#14237D"/>
+                    <stop stopColor="#306ECB"/>
+                    <stop offset="1" stopColor="#14237D"/>
                 </linearGradient>
                 <linearGradient id="paint2_linear_57_678" x1="235.371" y1="16.9199" x2="235.371" y2="255.574" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#306ECB"/>
-                    <stop offset="1" stop-color="#14237D"/>
+                    <stop stopColor="#306ECB"/>
+                    <stop offset="1" stopColor="#14237D"/>
                 </linearGradient>
                 <linearGradient id="paint3_linear_57_678" x1="909.629" y1="16.9199" x2="909.629" y2="255.574" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#306ECB"/>
-                    <stop offset="1" stop-color="#14237D"/>
+                    <stop stopColor="#306ECB"/>
+                    <stop offset="1" stopColor="#14237D"/>
                 </linearGradient>
                 <linearGradient id="paint4_linear_57_678" x1="301.871" y1="16.9199" x2="301.871" y2="255.574" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#306ECB"/>
-                    <stop offset="1" stop-color="#14237D"/>
+                    <stop stopColor="#306ECB"/>
+                    <stop offset="1" stopColor="#14237D"/>
                 </linearGradient>
             </defs> */}
         </motion.svg>
