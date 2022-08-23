@@ -254,7 +254,7 @@ export default function DigitalTwin() {
                     <div className="color-select">
                         {['red', 'orange', 'yellow', 'green', 'cyan','blue', 'purple'].map(color => {
                             return(
-                                <motion.div key={color} className={`color-option ${color} ${color == blobColor ? 'active' : null}`} onClick={() => changeColor(color)}
+                                <motion.div key={color} className={`color-option lh ${color} ${color == blobColor ? 'active' : null}`} onClick={() => changeColor(color)}
                                 />
                             )
                         })}

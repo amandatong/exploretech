@@ -1,20 +1,21 @@
 #about {
-    background-image:url('/assets/about/background.svg');
-    background-size:cover;
-    background-position:center center;
+    background-color:$cyan;
     width:100vw;
     height:100vh;
     display:flex;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
 
     .about-wrap {
+        // background-image:url('/assets/about/background.svg');
+        // background-size:cover;
+        // background-position:center center;
         width:100vw;
         height:100vh;
-        border-radius:20px;
+        // border-radius:20px;
         display:flex;
         flex-direction: column;
-        // justify-content: center;
+        justify-content: center;
         align-items: center;
         padding:5rem;
 
@@ -39,5 +40,19 @@
         position:absolute;
         bottom:0;
         width:100vw;
+
+        path { fill: black;}
+    }
+
+    .scroll-arrow-wrap {
+        position:absolute;
+        bottom:5rem;
+        left:calc(50% - 25px);
+        width:50px;
+        height:50px;
+        padding:0.5rem;
+        border-radius:100px;
+        background-color:white;
+        svg { color: black }
     }
 }

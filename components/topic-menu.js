@@ -12,7 +12,7 @@ export default function TopicMenu({active}) {
             return(
                 <Link key={`${key}_topic`} href={`/${key}`}>
                 <Tooltip placement="bottom" title={t(`${key}`)}>
-                  {index == active ? <ColoredCube className="active"/> : <CubeIcon/>}
+                  {index == active ? <ColoredCube className="active lh"/> : <CubeIcon className="lh"/>}
               </Tooltip></Link>
             )
         })}

@@ -14,7 +14,7 @@ export default function Home() {
         <div className="hero">
           <motion.div exit={{opacity:0}} className="title">{t('title')}</motion.div>
           <motion.div exit={{opacity:0}} className="subtitle">{t('subtitle')}</motion.div>
-          <Link href="/explore"><div className="button">{t('button')}</div></Link>
+          <Link href="/explore"><div className="button lh">{t('button')}</div></Link>
         </div>
       </div>
     </main>

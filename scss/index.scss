@@ -26,6 +26,10 @@ a {
     }
 }
 
+.lh { 
+    cursor:none !important;
+}
+
 .page-title {
     font-size:$page-title;
     text-transform:uppercase;
@@ -49,7 +53,7 @@ a {
     font-weight:600;
     text-transform: uppercase;
     line-height:1;
-    cursor:pointer;
+    // cursor:pointer;
     text-align:center;
     transform:translateY(150px);
 

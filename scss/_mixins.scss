@@ -16,6 +16,14 @@
         color:$text !important;
         &:hover{color:$text !important;}
     }
+    
+
+    // .ant-dropdown-menu-title-content a {
+    //     color:$text !important;
+    // }
+
+    .cursor-dot { background-color: $text }
+    .cursor-dot-outline { border: 1px solid $text;}
 
     .links {
 
@@ -79,9 +87,9 @@
     }
 
     #about {
-        .about-wrap {
-            background-color:rgba($bg, 0.7);
-        }
+        // .about-wrap {
+        //     background-color:rgba($bg, 0.7);
+        // }
     }
     // @include meta.load-css($src);
 }

@@ -53,8 +53,8 @@ export default function AI() {
                     <p>{t(`ml.steps.${index}.desc`)}</p>
                 </div>
                 <div className="button-wrap">
-                    {index !== 0 && <div className="ex-button" onClick={() => prevSlide()}><ArrowLeftIcon/> {t('ml.prev')}</div>}
-                    <div className="ex-button" onClick={() => nextSlide()}>{index === 0 ? t('ml.how') : (index === (ML_STEPS - 1) ? t('ml.finish') : t('ml.next'))} <ArrowRightIcon/></div>
+                    {index !== 0 && <div className="ex-button lh" onClick={() => prevSlide()}><ArrowLeftIcon/> {t('ml.prev')}</div>}
+                    <div className="ex-button lh" onClick={() => nextSlide()}>{index === 0 ? t('ml.how') : (index === (ML_STEPS - 1) ? t('ml.finish') : t('ml.next'))} <ArrowRightIcon/></div>
                 </div>
             </div>
         )

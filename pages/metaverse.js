@@ -105,13 +105,13 @@ export default function Metaverse() {
                         <>
                         <motion.div initial={{opacity:0,y:-200}} whileInView={{opacity:1,y:0, transition: {type:'spring',duration: 2,delay:0.2}}} 
                           className="xr_device" key={key} id={key}>
-                            <div onClick={() => setIsModalVisible(key)}>
+                            <div onClick={() => setIsModalVisible(key)} className="lh">
                                 <div className="xr_device_img"><Image src={`/assets/metaverse/${key}.svg`} width='400' height='400'/></div>
-                                <div className="xr_device_title">{t(`xr.${key}`)}</div>
+                                <div className="xr_device_title">{key}</div>
                             </div>
                         </motion.div>
                         
-                        <Modal key={key} centered visible={isModalVisible === key} onCancel={() => setIsModalVisible('')} footer={null} closeIcon={<div className="modal-close"><XIcon/></div>}>
+                        <Modal key={key} centered visible={isModalVisible === key} onCancel={() => setIsModalVisible('')} footer={null} closeIcon={<div className="modal-close lh"><XIcon/></div>}>
                             <div className="modal-wrap">
                                 <div className="xr_modal_left">
                                     <img src={`/assets/metaverse/${key}.svg`} id={`${key}_img`}/>
@@ -166,12 +166,12 @@ export default function Metaverse() {
                 <div className="ownership_desc">{t('ownership.desc')}</div>
             </div>
             <div className="blockchain-desktop">
-                <div className={`text ${showScreen ? "hide" : "show"}`} onClick={() => setShowScreen(true)}>
+                <div className={`text ${showScreen ? "hide" : "show"} lh`} onClick={() => setShowScreen(true)}>
                     <lord-icon trigger="hover" speed="0.4" src={`/assets/lotties/coins.json`} style={{margin:'-4vw 0 -1vw 0',width:'14vw', height:'14vw'}}/>
                     {t('ownership.blockchain')}
                 </div>
                 <div className={`text2 ${showScreen ? "show" : "hide"}`}> 
-                    <XIcon className="closer" width="40px" onClick={() => setShowScreen(false)}/>
+                    <XIcon className="closer lh" width="40px" onClick={() => setShowScreen(false)}/>
                     {t('ownership.blockchain_desc')}
                 </div>
             </div>
@@ -184,9 +184,9 @@ export default function Metaverse() {
                 <Meta/> <Clipboard/>
             </div>
         </div>
-        <div id="enter_metaverse" className="section">
+        {/* <div id="enter_metaverse" className="section">
             <div className="section-title">enter the metaverse</div>
-        </div>
+        </div> */}
         
         <Link href="/digital-twin" passHref>
             <div className={`reveal_next ${showBottom ? 'show' : 'hide'}`}>{t('next')} <ArrowRightIcon/></div>

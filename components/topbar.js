@@ -58,18 +58,20 @@ export default function Topbar() {
     <div id="topbar">
       <div className="topbar-wrap">
         <div className="settings">
+          {/* <div className="lh"> */}
           <Tooltip placement="bottomLeft" title={darkModeActive ? `${t('dark')}` : `${t('light')}`}>
             <div className="mode-switch" onClick={() => toggleMode()}>
               {darkModeActive ? <MoonIcon/> : <SunIcon/>}
             </div>
           </Tooltip>
+          {/* </div> */}
 
           <Tooltip placement="bottomLeft" title={`${t('lang')}`}>
             <Dropdown overlay={langs} trigger={['click']}><a onClick={e => e.preventDefault()}><GlobeAltIcon/></a></Dropdown>
           </Tooltip>
         </div>
               
-        <div className="menu" onClick={showDrawer}>
+        <div className="menu lh" onClick={showDrawer}>
           <Tooltip placement="bottomRight" title={`${t('menu')}`}>
             <MenuIcon/>
           </Tooltip>

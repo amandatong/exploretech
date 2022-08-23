@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import Drawer from 'antd/lib/drawer';
 import { XIcon } from '@heroicons/react/outline';
+import Cursor from './Cursor';
 
 export default function NavMenu({onClose, visible}) {
   const { t, i18n } = useTranslation('common', { keyPrefix: 'nav' });
@@ -19,15 +20,16 @@ export default function NavMenu({onClose, visible}) {
       drawerStyle={{
         backgroundImage: `url("${isHovering ? `/assets/nav/${isHovering}.svg` : '/assets/nav/blank.svg'}")`
       }}>
+        {/* <Cursor targets={['.lh', '.link']}/> */}
         <div className="menu-wrap">
           <div className="closeBar">
-              <div id="close" onClick={onClose}><XIcon/></div>
+              <div id="close" className="lh" onClick={onClose}><XIcon/></div>
           </div>
           <div className="menu-container">
             <div className="links">
               {['home', 'explore', 'future'].map((key) =>{
                 return(
-                  <div id={`${key}_drawer`} key={key} className="link" onMouseEnter={() => onMouseEnter(key)} onMouseLeave={onMouseLeave} onClick={onClose}><Link href={`/${key === 'home' ? '' : key}`}><a className={key}>{t(key)}</a></Link></div>
+                  <div id={`${key}_drawer`} key={key} className="link lh" onMouseEnter={() => onMouseEnter(key)} onMouseLeave={onMouseLeave} onClick={onClose}><Link href={`/${key === 'home' ? '' : key}`}><a className={key}>{t(key)}</a></Link></div>
                 )
               })}
             </div>

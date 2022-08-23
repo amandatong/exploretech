@@ -35,7 +35,7 @@
             }
 
             .cube, .link-title { 
-                cursor:pointer; 
+                // cursor:pointer; 
                 text-align:center;
             }
 
@@ -57,7 +57,7 @@
         font-weight:600;
         font-size:calc($subtitle - 2px);
         text-align:center;
-        cursor:pointer;
+        // cursor:pointer;
         display:flex;
         justify-content: center;
         align-items: center;

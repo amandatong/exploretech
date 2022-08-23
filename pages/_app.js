@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Layout from '../components/layout';
 import withDarkMode, { useDarkMode, MODE } from 'next-dark-mode';
+import Cursor from '../components/Cursor';
 
 
 function App({ Component, pageProps, router }) {

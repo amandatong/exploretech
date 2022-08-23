@@ -1,6 +1,7 @@
 #ai {
     overflow-y:scroll;
     height:100vh;
+    scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width:none;
     &::-webkit-scrollbar {
@@ -91,7 +92,7 @@
                 border-radius:25px;
                 padding:1rem 2rem;
                 line-height:1;
-                cursor:pointer;
+                // cursor:pointer;
 
                 svg { width:2rem;margin-left:1rem;}
                 &:hover { background:linear-gradient($cyan, $blue)}

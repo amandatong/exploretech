@@ -9,7 +9,7 @@
     // font-size:1.2em;
     svg {
         width: calc($body + 4px);
-        cursor:pointer;
+        // cursor:pointer;
     }
 
     .topbar-wrap {
@@ -49,7 +49,10 @@
         display:flex;
         justify-content: flex-end;
     
-        #close{width:1.5em; cursor:pointer;}
+        #close{
+            width:1.5em; 
+            // cursor:pointer;
+        }
     }
 
     .menu-container {
@@ -86,12 +89,12 @@
     position:fixed;
     top:1rem;
     left:calc(50% - 70px);
-    z-index:9999999999;
+    z-index:999999991;
 
     svg {
         width:calc(($body + 4px) * 1.15);
         color:gray;
-        cursor:pointer;
+        // cursor:pointer;
         transition: all 0.1s ease-in-out;
 
         &.active {

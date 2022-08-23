@@ -5,6 +5,7 @@ import DTCube from '../public/assets/explore/dt.svg';
 import { useTranslation } from 'next-i18next';
 import CubeFloat from '../components/cube-float';
 import { InformationCircleIcon } from '@heroicons/react/outline';
+import { motion } from 'framer-motion';
 
 export default function Explore() {
     const { t, i18n } = useTranslation('common', { keyPrefix: 'explore' });
@@ -19,7 +20,7 @@ export default function Explore() {
             {[{key:'ai',cube:<AICube/>},{key:'metaverse', cube:<MetaverseCube/>},{key:'digital-twin',cube:<DTCube/>}].map((topic) => {
             return(
               <Link key={topic.key} href={`/${topic.key}`} passHref>
-                <div id={`${topic.key}_link`} className="explore_link">
+                <div id={`${topic.key}_link`} className="explore_link lh">
                   <div className="cube">{topic.cube}</div>
                   <div className="link-title">{t(topic.key)}</div>
                 </div>
@@ -29,7 +30,7 @@ export default function Explore() {
           </div>
 
           <div className="about-button-wrap">
-          <Link href="/about"><div className="about-button"><InformationCircleIcon/> {t('about')}</div></Link>
+          <Link href="/about"><div className="about-button lh" layout layoutId="aboutmotion"><InformationCircleIcon/> {t('about')}</div></Link>
           </div>
         </div>
       </main>

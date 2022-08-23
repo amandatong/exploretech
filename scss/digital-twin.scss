@@ -3,6 +3,7 @@
     overflow-y:scroll;
     // flex-direction: column;
     height:100vh;
+    scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width:none;
     &::-webkit-scrollbar {

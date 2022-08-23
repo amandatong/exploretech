@@ -1,0 +1,24 @@
+* {
+    cursor:none;
+}
+
+.cursor-dot, .cursor-dot-outline {
+    z-index:999999999999999999999999;
+    pointer-events:none;
+    position:fixed;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    cursor: none;
+    transition: width 0.2s linear, height 0.2s linear;
+}
+
+.cursor-dot {
+    // background-color:white;
+    width:5px;
+    height:5px;
+}
+
+.cursor-dot-outline {
+    // border:1px solid white;
+    width:35px;height:35px;
+}
