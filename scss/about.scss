@@ -5,6 +5,12 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    scroll-behavior: smooth;
+    display:block;
+    // display:flex;
+    // flex-direction: column;
+    overflow-y:scroll;
+    color:white !important;
 
     .about-wrap {
         // background-image:url('/assets/about/background.svg');
@@ -18,6 +24,7 @@
         justify-content: center;
         align-items: center;
         padding:5rem;
+        position:relative;
 
         .page-title {
             margin-bottom:-0.5rem;
@@ -27,12 +34,6 @@
             font-size:$subtitle;
             font-weight:600;
             font-style:italic;
-        }
-
-        .desc { 
-            margin-top:5rem;
-            width:60vw;
-            text-align: justify;
         }
     }
 
@@ -52,7 +53,57 @@
         height:50px;
         padding:0.5rem;
         border-radius:100px;
-        background-color:white;
-        svg { color: black }
+        transition: all 0.5s ease-in-out;
+        background-color:black;
+        svg { color: white; }
+
+        &:hover {
+            background-color:$darkcyan !important;
+        }
+    }
+
+    .moreinfo {
+        height:calc(100vh + 5rem);
+        background-color:$darkcyan;
+        width:100vw;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .desc { 
+            margin:1rem 0;
+            width:60vw;
+            text-align: justify;
+        }
+
+        .i-wrap {
+            display:flex;
+            width:60vw;
+
+            .vision, .mission {
+                flex:1;
+                margin: 0 1.5rem;
+                text-align:center;
+
+                .subsection-title {
+                    font-size:$button;
+                    text-transform: uppercase;
+                    font-weight:600;
+                }
+
+                .quote {border:1px solid white;padding:1rem;margin:1rem 0;}
+
+                .desc {
+                    width:initial;
+
+                    li { margin-bottom:0.5rem;}
+                }
+            }
+        }
+    }
+
+    .reveal_next {
+        background-color:$blue;
     }
 }

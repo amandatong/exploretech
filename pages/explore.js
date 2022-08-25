@@ -30,7 +30,7 @@ export default function Explore() {
           </div>
 
           <div className="about-button-wrap">
-          <Link href="/about"><div className="about-button lh" layout layoutId="aboutmotion"><InformationCircleIcon/> {t('about')}</div></Link>
+          <Link href="/about"><div className="about-button lh"><InformationCircleIcon/> {t('about')}</div></Link>
           </div>
         </div>
       </main>
