@@ -1,9 +1,7 @@
 ## Known Bugs
 - [ ] Dark mode does not save on hard refresh
 - [ ] Language does not save across sessions
-- [ ] add about and contact/credits to menu
 - AI Page
-    - [ ] Animate all objects
     - [ ] Find icons for flashcards
     - [ ] Animate flashcards sliding in and out, rather than just the images
     - [ ] Animate robot bobbing up and down
@@ -12,6 +10,4 @@
     - [ ] Mobile responsiveness
     - [ ] Update ending graphics
 - Digital Twin Page
-    - [ ] Finish animating
     - [ ] Add input hovers
--[ ] add innovation / future page
