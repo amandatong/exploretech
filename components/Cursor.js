@@ -30,13 +30,13 @@ export default function Cursor({targets}) {
         if(cursorEnlarged.current){
             dot.current.style.width = '15px';
             dot.current.style.height = '15px';
-            // dot.current.style.transform = 'translate(-50%,-50%) scale (0.75)';
-            dotOutline.current.style.transform = 'translate(-50%,-50%) scale (1.5)';
+            dotOutline.current.style.width = '45px';
+            dotOutline.current.style.height = '45px';
         } else {
             dot.current.style.width = '5px';
             dot.current.style.height = '5px';
-            // dot.current.style.transform = 'translate(-50%,-50%) scale (1)';
-            dotOutline.current.style.transform = 'translate(-50%,-50%) scale (1)';
+            dotOutline.current.style.width = '35px';
+            dotOutline.current.style.height = '35px';
         }
     }
 

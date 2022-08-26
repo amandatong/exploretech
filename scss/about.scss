@@ -63,23 +63,40 @@
     }
 
     .moreinfo {
-        height:calc(100vh + 5rem);
+        height:auto;
         background-color:$darkcyan;
         width:100vw;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        padding-top:5rem;
+        padding-bottom:10rem;
+
+        .more-wrap {
+            width:100vw;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
         .desc { 
             margin:1rem 0;
             width:60vw;
             text-align: justify;
+
+            @media screen and (max-width: $md) {
+                width:100%;
+                padding:2rem;
+            }
         }
 
         .i-wrap {
             display:flex;
             width:60vw;
+
+            @media screen and (max-width: $md) {
+                width:100%;
+                padding:2rem;
+                flex-direction: column;
+            }
 
             .vision, .mission {
                 flex:1;
@@ -105,5 +122,9 @@
 
     .reveal_next {
         background-color:$blue;
+
+        &:hover {
+            background-color:$indigo;
+        }
     }
 }

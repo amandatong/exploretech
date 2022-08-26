@@ -40,6 +40,7 @@ export default function About() {
             </div>
             {/* Credits: <a href="https://lordicon.com/">Animated icons by Lordicon.com</a> */}
             <div id="more" className="moreinfo">
+                <div className="more-wrap">
                 <div className="section-title">Introduction</div>
                 <div className="desc">
                     <p>HMGICS is a global open innovation hub and smart factory, focused on human-centered innovation, digital transformation, and 
@@ -71,6 +72,7 @@ export default function About() {
                             </ul>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             <Link href="/explore" passHref>

@@ -159,7 +159,7 @@ export default function Metaverse() {
             <motion.div initial={{opacity:0,scale:0,y:-100}} whileInView={{y:0,opacity:1,scale:1, transition: {duration:0.8}}} id="coin4"/>
             <motion.div initial={{opacity:0,scale:0,x:-100}} whileInView={{x:0,opacity:1,scale:1, transition: {duration:0.6,delay: 0.3}}} id="coin5"/>
         </div>
-        <motion.div initial={{opacity:0}} whileInView={{opacity:1, transition: {duration:0.7}}}
+        <motion.div initial={{opacity:0}} whileInView={{opacity:1, transition: {delay:0.1,duration:0.7}}}
           id="ownership" className="section">
             <div className="ownership_intro">
                 <div className="section-title">{t('ownership.title')}</div>
@@ -176,21 +176,21 @@ export default function Metaverse() {
                 </div>
             </div>
         </motion.div>
-        <div id="manufacturing" className="section">
+        <motion.div id="manufacturing" className="section">
             <div className="section-title">{t('role.title')}</div>
             <div className="desc">{t('role.desc')}</div>
             <Waves2 className="waves-graphic"/>
             <div className="icons-wrap">
                 <Meta/> <Clipboard/>
             </div>
-        </div>
-        {/* <div id="enter_metaverse" className="section">
-            <div className="section-title">enter the metaverse</div>
-        </div> */}
+        </motion.div>
         
         <Link href="/digital-twin" passHref>
             <div className={`reveal_next ${showBottom ? 'show' : 'hide'}`}>{t('next')} <ArrowRightIcon/></div>
         </Link>
+        {/* <div id="enter_metaverse" className="section">
+            <div className="section-title">enter the metaverse</div>
+        </div> */}
       </main>
       </>
     )

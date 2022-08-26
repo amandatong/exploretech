@@ -234,6 +234,7 @@ export default function DigitalTwin() {
                         <img className="blob" src={`/assets/digital-twin/blob_${blobIndex}.svg`}/>
                     </div> */}
                     <motion.div className="digital" 
+                    initial={{opacity:0}} whileInView={{opacity:1, transition: {duration:0.7}}}
                         // onMouseMove={handleMouse} style={{perspective:400}}
                     >
                         <motion.img className="blob" src={`/assets/digital-twin/blob_1_${blobColor}.svg`} 
@@ -251,36 +252,43 @@ export default function DigitalTwin() {
                             </div>
                         </div>
                     </motion.div>
-                    <div className="color-select">
+                    <motion.div className="color-select"
+                    initial={{opacity:0}} whileInView={{opacity:1, transition: {duration:0.7}}}>
                         {['red', 'orange', 'yellow', 'green', 'cyan','blue', 'purple'].map(color => {
                             return(
                                 <motion.div key={color} className={`color-option lh ${color} ${color == blobColor ? 'active' : null}`} onClick={() => changeColor(color)}
                                 />
                             )
                         })}
-                    </div>
-                    <div className="desc">
+                    </motion.div>
+                    <motion.div className="desc" 
+                    initial={{opacity:0}} whileInView={{opacity:1, transition: {duration:0.7}}}>
                         <div className="subsection-title">{t('iot.analyze.title')}</div>
                         <div className="subsection-desc">{t('iot.analyze.desc')}</div>
-                    </div>
+                    </motion.div>
                 </div>
-                <img src="/assets/digital-twin/analyze_line.svg" className="input-lines connect"/>
-                <div className="conclusion">
+                
+                <ConnectLine/> 
+                {/* <img src="/assets/digital-twin/analyze_line.svg" className="input-lines connect"/> */}
+                <motion.div className="conclusion" 
+                    initial={{opacity:0}} whileInView={{opacity:1, transition: {duration:0.7}}}>
                     {t('iot.output')}
-                </div>
+                </motion.div>
                 <div className="manufacturing">
-                    <div className="role-blobs">
+                    <motion.div className="role-blobs" 
+                    initial={{opacity:0}} whileInView={{opacity:1, transition: {duration:0.7}}}>
                         <div className="physical">
                             <img className="blob" src="/assets/digital-twin/blob_1.svg"/>
                         </div>
                         <div className="digital">
                             <img className="blob" src={`/assets/digital-twin/blob_1_${blobColor}.svg`}/>
                         </div>
-                    </div>
-                    <div className="desc">
+                    </motion.div>
+                    <motion.div className="desc" 
+                    initial={{opacity:0}} whileInView={{opacity:1, transition: {duration:0.7}}}>
                         <div className="section-title">{t('role')}</div>
                         <div className="section-desc">{t('role_desc')}</div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <Link href="/future" passHref>

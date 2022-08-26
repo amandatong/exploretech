@@ -2,6 +2,8 @@
     width:100vw;
     height:100vh;
     display:block;
+    overflow-y:scroll;
+    scroll-behavior: smooth;
 
     .intro-wrap {
         width:100vw;
@@ -11,7 +13,6 @@
         align-items: center;
 
         .intro-canvas {
-            // position:fixed;
             // overflow-y:scroll;
             width:90vw;
             height:85vh;
@@ -20,22 +21,106 @@
             border:0.5rem solid $blue;
 
             .page-title {
+                text-align:left;
                 color:white !important;
                 line-height:1;
                 position:absolute;
                 bottom:7rem;
                 left:7rem;
-                z-index:99999;
+                z-index:99;
             }
         }
     }
     #gradient-canvas {
-        // position:fixed;
-        width:100%;
-        height:100%;
+        position:fixed;
+        z-index:-1;
+        width:calc(90vw - 7rem);
+        height:calc(85vh - 7rem);
         --gradient-color-1: #30cbaf; 
         --gradient-color-2: #1dadcc; 
         --gradient-color-3: #306ecb;  
         --gradient-color-4: #8ebafd;
       }
+
+    .next-wrap {
+        width:100vw;
+        height:100vh;
+
+        &.flexible { height: auto; }
+
+        position:relative;
+        display:flex;
+        justify-content:center;
+        padding:5rem;
+
+        .next-desc {
+            padding-top:5rem;
+            width:calc(90vw - 7rem);
+            text-align: center;
+            .section-title {
+                margin-bottom:1rem;
+            }
+
+            @media screen and (max-width:$md) {
+                width:100vw;
+                padding:2rem;
+            }
+        }
+
+        .city {
+            position:absolute;
+            width:100vw;
+            bottom:0;
+        }
+    }
+
+    .updated-wrap {
+        padding-bottom:7rem;
+        .subsection-title {
+            font-size:$subtitle;
+            font-weight:600;
+        }
+    }
+
+    .chord-wrap {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+
+        .chord-col {
+            width:30%;
+            padding: 0 0.5rem;
+            .chord-title {
+                font-size:calc($subtitle);
+                font-weight:600;
+                margin-bottom:0.5rem;
+            }
+        }
+    }
+
+    .hyundai-links {
+        display:flex;
+        justify-content:center;
+        width:100%;
+
+        .socials,.f_links { flex:1;padding:2rem;text-align:center; }
+
+        .socials { display:flex;flex-direction: column;align-items:center;
+            .icons-span {display:flex;}}
+        
+        .icon {
+            // border-radius:100%;
+            // background-color:$cyan;
+            // width:2.5rem;height:2.5rem;
+            display:flex;justify-content:center;align-items:center;
+            margin:0 0.5rem;
+
+            img { width: 2rem }
+        }
+    }
+
+    .reveal_next {
+        background-color:$cyan;
+        &:hover { background-color: $blue}
+    }
 }
