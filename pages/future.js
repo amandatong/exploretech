@@ -114,7 +114,7 @@ export default function Future() {
                     data-transition-in></motion.canvas>
                 </motion.div>
             </div>
-            <motion.div id="content" ref={ref} viewport={{amount: 0.4}}initial={{background:'hsla(102, 100%, 0%, 0)',transition:{delay:0.5,duration:1}}} whileInView={{background:"hsla(102, 100%, 0%, 0.35)",transition:{duration:1}}}>
+            <motion.div id="content" ref={ref} viewport={{amount: 0.2}}initial={{background:'hsla(102, 100%, 0%, 0)',transition:{delay:0.5,duration:1}}} whileInView={{background:"hsla(102, 100%, 0%, 0.35)",transition:{duration:1}}}>
                 <motion.div className="next-wrap">
                     <motion.div className="next-desc" initial='hide' whileInView='show' variants={variants}>
                         <div className="section-title">{t('next')}</div>
