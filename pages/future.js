@@ -169,27 +169,27 @@ export default function Future() {
                                 <div className="subsection-title">Hyundai Social Media</div>
                                 <div className="icons-span">
                                     <div className="icon lh">
-                                        <a href="https://www.linkedin.com/company/hmgics/" target="_blank"><img src="/assets/future/linkedin.svg"/></a>
+                                        <a href="https://www.linkedin.com/company/hmgics/" rel="noreferrer" target="_blank"><img src="/assets/future/linkedin.svg"/></a>
                                     </div>
                                     <div className="icon lh">
-                                        <a href="https://www.facebook.com/Hyundaiworldwide" target="_blank"><img src="/assets/future/facebook.svg"/></a>
+                                        <a href="https://www.facebook.com/Hyundaiworldwide" rel="noreferrer" target="_blank"><img src="/assets/future/facebook.svg"/></a>
                                     </div>
                                     <div className="icon lh">
-                                        <a href="https://www.instagram.com/hyundai/" target="_blank"><img src="/assets/future/instagram.svg"/></a>
+                                        <a href="https://www.instagram.com/hyundai/" rel="noreferrer" target="_blank"><img src="/assets/future/instagram.svg"/></a>
                                     </div>
                                     <div className="icon lh">
-                                        <a href="http://www.youtube.com/user/hyundaiworldwide" target="_blank"><img src="/assets/future/youtube.svg"/></a>
+                                        <a href="http://www.youtube.com/user/hyundaiworldwide" rel="noreferrer" target="_blank"><img src="/assets/future/youtube.svg"/></a>
                                     </div>
                                     <div className="icon lh">
-                                        <a href="https://twitter.com/hyundai_global" target="_blank"><img src="/assets/future/twitter.svg"/></a>
+                                        <a href="https://twitter.com/hyundai_global" rel="noreferrer" target="_blank"><img src="/assets/future/twitter.svg"/></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="f_links">
                                 <div className="subsection-title">Hyundai Links</div>
                                 <div>
-                                    <a href="https://hyundaisingapore.com/news/newsroom" target="_blank">Newsroom</a><br/>
-                                    <a href="https://hyundaisingapore.com/contact-us" target="_blank">Contact Us</a>
+                                    <a href="https://hyundaisingapore.com/news/newsroom" rel="noreferrer" target="_blank">Newsroom</a><br/>
+                                    <a href="https://hyundaisingapore.com/contact-us" rel="noreferrer" target="_blank">Contact Us</a>
                                 </div>
                             </div>
                         </div>
